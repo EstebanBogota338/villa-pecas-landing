@@ -43,4 +43,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+
+    /* =========================================================
+    Animación de secciones al hacer scroll
+    ========================================================== */
+
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+
+    // Cerrar menú al hacer clic en el botón "RESERVAR" (navbar)
+    document.querySelector('.nav-button')?.addEventListener('click', () => {
+        if (navToggle) navToggle.checked = false;
+    });
+
 });

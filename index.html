@@ -39,86 +39,123 @@
 
 <header class="navbar">
 
-    <a href="#inicio" class="logo">
+    <!-- ===== NAVBAR ===== -->
 
-        <!-- Logo -->
+<a href="#inicio" class="logo">
 
-        <svg
-            class="logo-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-        >
+    <!-- Logo -->
+    <svg
+        class="logo-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+    >
 
-            <path
-                d="M12 22L12 14M12 10L12 14M12 14L16 12"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
+        <path
+            d="M12 22L12 14M12 10L12 14M12 14L16 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
 
-            <path
-                d="M17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.76142 7 7"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
+        <path
+            d="M17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.76142 7 7"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
 
-            <path
-                d="M12 18H7.5C4.46243 18 2 15.5376 2 12.5C2 9.46243 4.46243 7 7.5 7H9"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
+        <path
+            d="M12 18H7.5C4.46243 18 2 15.5376 2 12.5C2 9.46243 4.46243 7 7.5 7H9"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
 
-            <path
-                d="M12 18H16.5C19.5376 18 22 15.5376 22 12.5C22 9.63102 19.8033 7.27508 17 7.02246"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
+        <path
+            d="M12 18H16.5C19.5376 18 22 16.2386 22 12.5C22 9.63102 19.8033 7.27508 17 7.02246"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
 
-        </svg>
+    </svg>
 
 
-        <div class="logo-text">
+    <div class="logo-text">
 
-            <span class="logo-name">
-                VILLA PECAS
-            </span>
+        <span class="logo-name">
+            VILLA PECAS
+        </span>
 
-            <span class="logo-subtitle">
-                ECO · FRIENDLY LUXURY
-            </span>
+        <span class="logo-subtitle">
+            ECO · FRIENDLY LUXURY
+        </span>
 
-        </div>
+    </div>
 
+</a>
+
+
+<!-- ===== MENÚ HAMBURGUESA ===== -->
+
+<input
+    type="checkbox"
+    class="nav-toggle-checkbox"
+    id="nav-toggle"
+>
+
+<label
+    for="nav-toggle"
+    class="nav-toggle-label"
+    aria-label="Abrir menú"
+>
+    <span></span>
+</label>
+
+
+<!-- ===== NAVEGACIÓN ===== -->
+
+<nav class="nav-menu">
+
+    <a href="#inicio">
+        INICIO
     </a>
 
-    <!-- ===== MENÚ HAMBURGUESA (checkbox + label) ===== -->
-    <input type="checkbox" class="nav-toggle-checkbox" id="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
-        <span></span>
-    </label>
-
-    <nav class="nav-menu">
-
-        <a href="#inicio">INICIO</a>
-        <a href="#nosotros">NOSOTROS</a>
-        <a href="#espacios">COMODIDADES</a>
-        <a href="#galeria">GALERÍA</a>
-        <a href="#contacto">CONTACTO</a>
-
-    </nav>
-
-    <a href="#contacto" class="nav-button">
-        RESERVAR
+    <a href="#nosotros">
+        NOSOTROS
     </a>
+
+    <a href="#espacios">
+        COMODIDADES
+    </a>
+
+    <a href="#galeria">
+        GALERÍA
+    </a>
+
+    <a href="#contacto">
+        CONTACTO
+    </a>
+
+</nav>
+
+
+<!-- ===== BOTÓN RESERVAR → WHATSAPP ===== -->
+
+<a
+    href="https://wa.me/573000000000?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
+    class="nav-button"
+    target="_blank"
+    rel="noopener"
+>
+    RESERVAR
+</a>
 
 </header>
 
@@ -174,12 +211,15 @@
         </p>
 
 
-        <a href="#contacto" class="hero-button">
-
+        <!--  BOTÓN HERO → WHATSAPP -->
+        <a
+            href="https://wa.me/573000000000?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
+            class="hero-button"
+            target="_blank"
+            rel="noopener"
+        >
             <span>→</span>
-
             RESERVA TU EXPERIENCIA
-
         </a>
 
     </div>
@@ -872,7 +912,7 @@
 
         <div class="gallery-carousel">
 
-            <button class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
+            <button type="button" class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
                 ←
             </button>
 
@@ -931,7 +971,7 @@
             </div>
 
 
-            <button class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
+            <button type="button" class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
                 →
             </button>
 
@@ -962,7 +1002,7 @@
 
         <div class="gallery-carousel">
 
-            <button class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
+            <button type="button" class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
                 ←
             </button>
 
@@ -1021,7 +1061,7 @@
             </div>
 
 
-            <button class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
+            <button type="button" class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
                 →
             </button>
 
@@ -1149,7 +1189,7 @@
             </span>
 
             <a
-                href="https://wa.me/573000000000?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20Villa%20Pecas"
+                href="https://wa.me/573000000000?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
                 class="contact-whatsapp-number"
                 target="_blank"
                 rel="noopener"
@@ -1246,9 +1286,10 @@
             </p>
 
             <a
-                href="https://wa.me/573000000000?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20Villa%20Pecas"
+                href="https://wa.me/573000000000?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
                 target="_blank"
                 rel="noopener"
+                class="footer-phone-link"
             >
                 +57 300 000 0000
             </a>
