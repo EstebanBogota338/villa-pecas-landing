@@ -8,6 +8,16 @@
 
     <title>Villa Pecas | Eco-Friendly Luxury</title>
 
+    <meta name="description" content="Villa Pecas: villa de lujo eco-friendly en Cumaral, Meta, para grupos de hasta 20 personas. Piscina, turco, sala húmeda y seca, cocina equipada y zona BBQ rodeados de naturaleza.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Villa Pecas | Eco-Friendly Luxury">
+    <meta property="og:description" content="Un lugar eco-friendly para grupos de hasta 20 personas en Cumaral, Meta. Naturaleza, descanso y conexión.">
+    <meta property="og:image" content="assets/images/hero.jpg">
+    <meta property="og:locale" content="es_CO">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4A968' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22L12 14M12 10L12 14M12 14L16 12'/%3E%3Cpath d='M17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.76142 7 7'/%3E%3Cpath d='M12 18H7.5C4.46243 18 2 15.5376 2 12.5C2 9.46243 4.46243 7 7.5 7H9'/%3E%3Cpath d='M12 18H16.5C19.5376 18 22 15.5376 22 12.5C22 9.63102 19.8033 7.27508 17 7.02246'/%3E%3C/svg%3E">
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Fuentes -->
@@ -90,17 +100,23 @@
 
     </a>
 
+    <!-- ===== MENÚ HAMBURGUESA (checkbox + label) ===== -->
+    <input type="checkbox" class="nav-toggle-checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Abrir menú">
+        <span></span>
+    </label>
+
     <nav class="nav-menu">
 
         <a href="#inicio">INICIO</a>
         <a href="#nosotros">NOSOTROS</a>
-        <a href="#habitaciones">HABITACIONES</a>
+        <a href="#espacios">COMODIDADES</a>
         <a href="#galeria">GALERÍA</a>
         <a href="#contacto">CONTACTO</a>
 
     </nav>
 
-    <a href="#reserva" class="nav-button">
+    <a href="#contacto" class="nav-button">
         RESERVAR
     </a>
 
@@ -158,7 +174,7 @@
         </p>
 
 
-        <a href="#reserva" class="hero-button">
+        <a href="#contacto" class="hero-button">
 
             <span>→</span>
 
@@ -216,7 +232,7 @@
         </p>
 
 
-        <a href="#habitaciones" class="about-button">
+        <a href="#espacios" class="about-button">
             DESCUBRE VILLA PECAS
         </a>
 
@@ -229,6 +245,10 @@
 <!-- ===================================================== CARACTERÍSTICAS ====================================================== -->
 
 <section class="features">
+
+    <h2 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">
+        Ventajas de Villa Pecas
+    </h2>
 
 
     <!-- ECO FRIENDLY -->
@@ -457,40 +477,36 @@
 
 </section>
 
+    <!-- =================================================
+     ESPACIOS
+================================================== -->
 
-
-<!-- ===================================================== HABITACIONES ====================================================== -->
-
-<section class="rooms" id="habitaciones">
-
+<section class="rooms" id="espacios">
 
     <div class="rooms-header">
 
         <p class="rooms-eyebrow">
-            NUESTROS ESPACIOS
+            VILLA PECAS
         </p>
 
-
         <h2>
-            SIETE HABITACIONES.<br>
-            UNA EXPERIENCIA PARA COMPARTIR.
+            TODO LO QUE NECESITAS<br>
+            PARA DISFRUTAR Y COMPARTIR.
         </h2>
 
-
         <p class="rooms-description">
-            Espacios pensados para descansar, disfrutar
-            y vivir Villa Pecas en compañía.
+            Un espacio pensado para disfrutar en grupo,
+            descansar y conectar con la naturaleza.
         </p>
 
     </div>
-
 
 
     <div class="rooms-grid">
 
 
         <!-- =================================================
-             HABITACIÓN 01
+             HABITACIONES
         ================================================== -->
 
         <article class="room-card">
@@ -498,55 +514,35 @@
             <div class="room-image">
 
                 <img
-                    src="assets/images/habitaciones/habitacion-1.jpg"
-                    alt="Habitación 1 de Villa Pecas"
+                    src="assets/images/espacios/habitacion.jpg"
+                    alt="Habitación con baño privado en Villa Pecas"
                 >
 
             </div>
 
-
             <div class="room-content">
 
                 <p class="room-number">
-                    HABITACIÓN 01
+                    DESCANSO
                 </p>
-
 
                 <h3>
-                    Nombre de la habitación
+                    Habitaciones
                 </h3>
 
-
                 <p class="room-description">
-                    Descripción breve de la habitación.
+                    Siete habitaciones con baño privado,
+                    pensadas para adaptarse a las necesidades
+                    de cada grupo.
                 </p>
-
-
-                <div class="room-details">
-
-                    <span>
-                        🛏 Camas
-                    </span>
-
-                    <span>
-                        🚿 Baño privado
-                    </span>
-
-                </div>
-
-
-                <a href="#" class="room-button">
-                    VER HABITACIÓN
-                </a>
 
             </div>
 
         </article>
-
 
 
         <!-- =================================================
-             HABITACIÓN 02
+             PISCINA
         ================================================== -->
 
         <article class="room-card">
@@ -554,55 +550,34 @@
             <div class="room-image">
 
                 <img
-                    src="assets/images/habitaciones/habitacion-2.jpg"
-                    alt="Habitación 2 de Villa Pecas"
+                    src="assets/images/espacios/piscina.jpg"
+                    alt="Piscina de Villa Pecas"
                 >
 
             </div>
 
-
             <div class="room-content">
 
                 <p class="room-number">
-                    HABITACIÓN 02
+                    RECREACIÓN
                 </p>
-
 
                 <h3>
-                    Nombre de la habitación
+                    Piscina
                 </h3>
 
-
                 <p class="room-description">
-                    Descripción breve de la habitación.
+                    Un espacio para refrescarse, relajarse
+                    y disfrutar juntos.
                 </p>
-
-
-                <div class="room-details">
-
-                    <span>
-                        🛏 Camas
-                    </span>
-
-                    <span>
-                        🚿 Baño privado
-                    </span>
-
-                </div>
-
-
-                <a href="#" class="room-button">
-                    VER HABITACIÓN
-                </a>
 
             </div>
 
         </article>
-
 
 
         <!-- =================================================
-             HABITACIÓN 03
+             TURCO
         ================================================== -->
 
         <article class="room-card">
@@ -610,55 +585,34 @@
             <div class="room-image">
 
                 <img
-                    src="assets/images/habitaciones/habitacion-3.jpg"
-                    alt="Habitación 3 de Villa Pecas"
+                    src="assets/images/espacios/turco.jpg"
+                    alt="Turco de Villa Pecas"
                 >
 
             </div>
 
-
             <div class="room-content">
 
                 <p class="room-number">
-                    HABITACIÓN 03
+                    BIENESTAR
                 </p>
-
 
                 <h3>
-                    Nombre de la habitación
+                    Turco
                 </h3>
 
-
                 <p class="room-description">
-                    Descripción breve de la habitación.
+                    Un espacio pensado para desconectar
+                    y disfrutar de un momento de relajación.
                 </p>
-
-
-                <div class="room-details">
-
-                    <span>
-                        🛏 Camas
-                    </span>
-
-                    <span>
-                        🚿 Baño privado
-                    </span>
-
-                </div>
-
-
-                <a href="#" class="room-button">
-                    VER HABITACIÓN
-                </a>
 
             </div>
 
         </article>
-
 
 
         <!-- =================================================
-             HABITACIÓN 04
+             SALA HÚMEDA
         ================================================== -->
 
         <article class="room-card">
@@ -666,55 +620,34 @@
             <div class="room-image">
 
                 <img
-                    src="assets/images/habitaciones/habitacion-4.jpg"
-                    alt="Habitación 4 de Villa Pecas"
+                    src="assets/images/espacios/sala-humeda.jpg"
+                    alt="Sala húmeda de Villa Pecas"
                 >
 
             </div>
 
-
             <div class="room-content">
 
                 <p class="room-number">
-                    HABITACIÓN 04
+                    BIENESTAR
                 </p>
-
 
                 <h3>
-                    Nombre de la habitación
+                    Sala húmeda
                 </h3>
 
-
                 <p class="room-description">
-                    Descripción breve de la habitación.
+                    Un espacio para relajarse y disfrutar
+                    de una experiencia diferente.
                 </p>
-
-
-                <div class="room-details">
-
-                    <span>
-                        🛏 Camas
-                    </span>
-
-                    <span>
-                        🚿 Baño privado
-                    </span>
-
-                </div>
-
-
-                <a href="#" class="room-button">
-                    VER HABITACIÓN
-                </a>
 
             </div>
 
         </article>
-
 
 
         <!-- =================================================
-             HABITACIÓN 05
+             SALA SECA
         ================================================== -->
 
         <article class="room-card">
@@ -722,55 +655,34 @@
             <div class="room-image">
 
                 <img
-                    src="assets/images/habitaciones/habitacion-5.jpg"
-                    alt="Habitación 5 de Villa Pecas"
+                    src="assets/images/espacios/sala-seca.jpg"
+                    alt="Sala seca de Villa Pecas"
                 >
 
             </div>
 
-
             <div class="room-content">
 
                 <p class="room-number">
-                    HABITACIÓN 05
+                    BIENESTAR
                 </p>
-
 
                 <h3>
-                    Nombre de la habitación
+                    Sala seca
                 </h3>
 
-
                 <p class="room-description">
-                    Descripción breve de la habitación.
+                    Un ambiente tranquilo para descansar
+                    y compartir.
                 </p>
-
-
-                <div class="room-details">
-
-                    <span>
-                        🛏 Camas
-                    </span>
-
-                    <span>
-                        🚿 Baño privado
-                    </span>
-
-                </div>
-
-
-                <a href="#" class="room-button">
-                    VER HABITACIÓN
-                </a>
 
             </div>
 
         </article>
-
 
 
         <!-- =================================================
-             HABITACIÓN 06
+             COCINA
         ================================================== -->
 
         <article class="room-card">
@@ -778,55 +690,34 @@
             <div class="room-image">
 
                 <img
-                    src="assets/images/habitaciones/habitacion-6.jpg"
-                    alt="Habitación 6 de Villa Pecas"
+                    src="assets/images/espacios/cocina.jpg"
+                    alt="Cocina equipada de Villa Pecas"
                 >
 
             </div>
 
-
             <div class="room-content">
 
                 <p class="room-number">
-                    HABITACIÓN 06
+                    COMODIDAD
                 </p>
-
 
                 <h3>
-                    Nombre de la habitación
+                    Cocina equipada
                 </h3>
 
-
                 <p class="room-description">
-                    Descripción breve de la habitación.
+                    Cocina completamente equipada para
+                    preparar y compartir tus propias comidas.
                 </p>
-
-
-                <div class="room-details">
-
-                    <span>
-                        🛏 Camas
-                    </span>
-
-                    <span>
-                        🚿 Baño privado
-                    </span>
-
-                </div>
-
-
-                <a href="#" class="room-button">
-                    VER HABITACIÓN
-                </a>
 
             </div>
 
         </article>
-
 
 
         <!-- =================================================
-             HABITACIÓN 07
+             BBQ
         ================================================== -->
 
         <article class="room-card">
@@ -834,59 +725,556 @@
             <div class="room-image">
 
                 <img
-                    src="assets/images/habitaciones/habitacion-7.jpg"
-                    alt="Habitación 7 de Villa Pecas"
+                    src="assets/images/espacios/bbq.jpg"
+                    alt="Zona BBQ de Villa Pecas"
                 >
 
             </div>
 
-
             <div class="room-content">
 
                 <p class="room-number">
-                    HABITACIÓN 07
+                    PARA COMPARTIR
                 </p>
-
 
                 <h3>
-                    Nombre de la habitación
+                    Zona BBQ
                 </h3>
 
-
                 <p class="room-description">
-                    Descripción breve de la habitación.
+                    El espacio perfecto para cocinar,
+                    comer y pasar el rato en grupo.
                 </p>
-
-
-                <div class="room-details">
-
-                    <span>
-                        🛏 Camas
-                    </span>
-
-                    <span>
-                        🚿 Baño privado
-                    </span>
-
-                </div>
-
-
-                <a href="#" class="room-button">
-                    VER HABITACIÓN
-                </a>
 
             </div>
 
         </article>
 
+
+        <!-- =================================================
+             PARQUEADERO
+        ================================================== -->
+
+        <article class="room-card">
+
+            <div class="room-image">
+
+                <img
+                    src="assets/images/espacios/parqueadero.jpg"
+                    alt="Parqueadero privado de Villa Pecas"
+                >
+
+            </div>
+
+            <div class="room-content">
+
+                <p class="room-number">
+                    COMODIDAD
+                </p>
+
+                <h3>
+                    Parqueadero privado
+                </h3>
+
+                <p class="room-description">
+                    Espacio privado para que llegues,
+                    estaciones y disfrutes sin preocupaciones.
+                </p>
+
+            </div>
+
+        </article>
+
+         <!-- =================================================
+              SERVICIO DE COCINA PRIVADA (OPCIONAL)
+        ================================================== -->
+
+        <article class="room-card">
+
+            <div class="room-image">
+
+                <img
+                    src="assets/images/espacios/chef.jpg"
+                    alt="Servicio de cocina privada en Villa Pecas"
+                >
+
+            </div>
+
+            <div class="room-content">
+
+                <p class="room-number" style="color: var(--gold);">
+                    ✦ OPCIONAL
+                </p>
+
+                <h3>
+                    Servicio de cocina privada
+                </h3>
+
+                <p class="room-description">
+                    Disfruta de la experiencia de un chef privado
+                    que prepara comidas a medida para tu grupo.
+                    <br><br>
+                    <strong style="color: var(--green-dark);">
+                        Disponible bajo reserva · Coste adicional
+                    </strong>
+                </p>
+
+            </div>
+
+        </article>
 
     </div>
 
 </section>
 
+    <!-- =================================================
+     GALERÍA
+    ================================================== -->
+
+<section class="gallery" id="galeria">
+
+    <div class="gallery-header">
+
+        <p class="gallery-eyebrow">
+            GALERÍA
+        </p>
+
+        <h2>
+            CONOCE VILLA PECAS.
+        </h2>
+
+        <p class="gallery-description">
+            Un vistazo a los espacios donde podrás descansar,
+            compartir y disfrutar de la naturaleza.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         HABITACIONES
+    ================================================== -->
+
+    <div class="gallery-category">
+
+        <div class="gallery-category-header">
+
+            <p>
+                DESCANSO
+            </p>
+
+            <h3>
+                Nuestras habitaciones
+            </h3>
+
+        </div>
+
+
+        <div class="gallery-carousel">
+
+            <button class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
+                ←
+            </button>
+
+
+            <div class="gallery-track">
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/habitaciones/habitacion-1.jpg"
+                        alt="Habitación de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/habitaciones/habitacion-2.jpg"
+                        alt="Habitación de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/habitaciones/habitacion-3.jpg"
+                        alt="Habitación de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/habitaciones/habitacion-4.jpg"
+                        alt="Habitación de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/habitaciones/habitacion-5.jpg"
+                        alt="Habitación de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/habitaciones/habitacion-6.jpg"
+                        alt="Habitación de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/habitaciones/habitacion-7.jpg"
+                        alt="Habitación de Villa Pecas"
+                    >
+                </div>
+
+            </div>
+
+
+            <button class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         ZONAS COMUNES
+    ================================================== -->
+
+    <div class="gallery-category">
+
+        <div class="gallery-category-header">
+
+            <p>
+                EXPERIENCIA
+            </p>
+
+            <h3>
+                Nuestros espacios
+            </h3>
+
+        </div>
+
+
+        <div class="gallery-carousel">
+
+            <button class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
+                ←
+            </button>
+
+
+            <div class="gallery-track">
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/espacios/piscina.jpg"
+                        alt="Piscina de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/espacios/turco.jpg"
+                        alt="Turco de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/espacios/sala-humeda.jpg"
+                        alt="Sala húmeda de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/espacios/sala-seca.jpg"
+                        alt="Sala seca de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/espacios/cocina.jpg"
+                        alt="Cocina equipada de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/espacios/bbq.jpg"
+                        alt="Zona BBQ de Villa Pecas"
+                    >
+                </div>
+
+                <div class="gallery-slide">
+                    <img
+                        src="assets/images/espacios/parqueadero.jpg"
+                        alt="Parqueadero privado de Villa Pecas"
+                    >
+                </div>
+
+            </div>
+
+
+            <button class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =================================================
+     CONTACTO
+================================================== -->
+
+<section class="contact" id="contacto">
+
+    <div class="contact-image">
+
+        <img
+            src="assets/images/contacto.jpg"
+            alt="Villa Pecas rodeada de naturaleza"
+        >
+
+    </div>
+
+
+    <div class="contact-content">
+
+        <p class="contact-eyebrow">
+            CONTACTO
+        </p>
+
+
+        <h2>
+            ¿LISTO PARA<br>
+            ESCAPAR?
+        </h2>
+
+
+        <div class="contact-divider"></div>
+
+
+        <p class="contact-text">
+            Cuéntanos cuándo quieres venir y cuántas personas
+            son. Estamos disponibles para ayudarte a organizar
+            tu estadía en Villa Pecas.
+        </p>
+
+
+        <div class="contact-details">
+
+            <div class="contact-detail">
+
+                <span class="contact-detail-icon">📍</span>
+
+                <div>
+                    <span class="contact-detail-label">
+                        UBICACIÓN
+                    </span>
+
+                    <span class="contact-detail-value">
+                        Cumaral, Meta
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <span class="contact-detail-icon">👥</span>
+
+                <div>
+                    <span class="contact-detail-label">
+                        CAPACIDAD
+                    </span>
+
+                    <span class="contact-detail-value">
+                        Hasta 20 personas
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <span class="contact-detail-icon">🚗</span>
+
+                <div>
+                    <span class="contact-detail-label">
+                        COMODIDAD
+                    </span>
+
+                    <span class="contact-detail-value">
+                        Parqueadero privado
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <span class="contact-detail-icon">🏊</span>
+
+                <div>
+                    <span class="contact-detail-label">
+                        RECREACIÓN
+                    </span>
+
+                    <span class="contact-detail-value">
+                        Piscina
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-whatsapp">
+
+            <span class="contact-whatsapp-label">
+                WHATSAPP
+            </span>
+
+            <a
+                href="https://wa.me/573000000000?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20Villa%20Pecas"
+                class="contact-whatsapp-number"
+                target="_blank"
+                rel="noopener"
+            >
+                +57 300 000 0000
+            </a>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/573000000000?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20Villa%20Pecas"
+            class="contact-button"
+            target="_blank"
+            rel="noopener"
+        >
+            CONSULTAR DISPONIBILIDAD
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- =================================================
+     FOOTER
+================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <div class="footer-symbol">
+                ✦
+            </div>
+
+            <h2>
+                VILLA PECAS
+            </h2>
+
+            <p class="footer-subtitle">
+                ECO · FRIENDLY LUXURY
+            </p>
+
+            <p class="footer-tagline">
+                NATURALEZA · DESCANSO · CONEXIÓN
+            </p>
+
+        </div>
+
+
+        <div class="footer-location">
+
+            <p class="footer-label">
+                UBICACIÓN
+            </p>
+
+            <p>
+                Cumaral, Meta
+            </p>
+
+        </div>
+
+
+        <div class="footer-navigation">
+
+            <p class="footer-label">
+                NAVEGACIÓN
+            </p>
+
+            <a href="#inicio">INICIO</a>
+
+            <a href="#nosotros">NOSOTROS</a>
+
+            <a href="#espacios">ESPACIOS</a>
+
+            <a href="#galeria">GALERÍA</a>
+
+            <a href="#contacto">CONTACTO</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <p class="footer-label">
+                RESERVAS
+            </p>
+
+            <p>
+                WhatsApp
+            </p>
+
+            <a
+                href="https://wa.me/573000000000?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20Villa%20Pecas"
+                target="_blank"
+                rel="noopener"
+            >
+                +57 300 000 0000
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Villa Pecas
+        </p>
+
+        <p>
+            Todos los derechos reservados
+        </p>
+
+    </div>
+
+</footer>
 
 </main>
 
+<script src="js/main.js" defer></script>
 
 </body>
 
