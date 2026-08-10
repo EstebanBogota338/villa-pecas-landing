@@ -1,0 +1,1251 @@
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root {
+
+    --green-dark: #315A46;
+    --green: #76A982;
+    --green-light: #B8D8B5;
+
+    --cream: #F3EFE1;
+    --gold: #C4A968;
+    --white: #FEFDF8;
+
+    --text-dark: #20352A;
+    --text: #31483A;
+    --text-light: #F7F3E8;
+
+    --navbar-bg: rgba(49, 90, 70, 0.90);
+
+    --overlay: linear-gradient(
+        rgba(49, 90, 70, 0.05),
+        rgba(49, 90, 70, 0.25)
+    );
+
+    --font-display: "Cormorant Garamond", serif;
+    --font-body: "Montserrat", sans-serif;
+
+    --transition: all 0.3s ease;
+
+    --radius: 10px;
+}
+
+
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: var(--green-dark);
+    color: var(--white);
+    font-family: var(--font-body);
+}
+
+
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 105px;
+
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 3.5rem;
+
+    background: var(--navbar-bg);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+}
+
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo {
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--cream);
+
+    text-decoration: none;
+}
+
+
+.logo-icon {
+
+    width: 42px;
+    height: 42px;
+
+    color: var(--gold);
+
+    flex-shrink: 0;
+}
+
+
+.logo-text {
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo-name {
+
+    font-family: var(--font-display);
+
+    font-size: 2rem;
+
+    letter-spacing: 3px;
+
+    line-height: 1;
+}
+
+
+.logo-subtitle {
+
+    margin-top: 6px;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 3px;
+
+    opacity: 0.8;
+}
+
+
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.nav-menu {
+
+    display: flex;
+
+    gap: 2.4rem;
+}
+
+
+.nav-menu a {
+
+    color: var(--cream);
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+
+    letter-spacing: 1px;
+
+    transition: var(--transition);
+}
+
+
+.nav-menu a:hover {
+
+    color: var(--gold);
+}
+
+
+
+/* ==========================================================
+   BOTÓN NAVBAR
+========================================================== */
+
+.nav-button {
+
+    padding: 14px 28px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 999px;
+
+    color: var(--cream);
+
+    text-decoration: none;
+
+    letter-spacing: 1px;
+
+    font-size: 0.8rem;
+
+    transition: var(--transition);
+}
+
+
+.nav-button:hover {
+
+    background: var(--gold);
+
+    color: var(--green-dark);
+}
+
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 88vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+
+/* ==========================================================
+   FOTO HERO
+========================================================== */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("img/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.03);
+}
+
+
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: var(--overlay);
+}
+
+
+
+/* ==========================================================
+   CONTENIDO HERO
+========================================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(900px, 90%);
+
+    text-align: center;
+
+    margin-top: 80px;
+}
+
+
+
+/* ==========================================================
+   SÍMBOLO
+========================================================== */
+
+.hero-symbol {
+
+    color: var(--gold);
+
+    font-size: 2.5rem;
+
+    margin-bottom: 1rem;
+}
+
+
+
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.hero-eyebrow {
+
+    color: var(--cream);
+
+    font-family: var(--font-display);
+
+    font-size: 1.1rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* ==========================================================
+   TÍTULO HERO
+========================================================== */
+
+.hero h1 {
+
+    color: var(--white);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(5rem, 9vw, 8rem);
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    line-height: 0.9;
+}
+
+
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.hero-divider {
+
+    width: 90px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 2rem auto;
+}
+
+
+
+/* ==========================================================
+   SUBTÍTULO HERO
+========================================================== */
+
+.hero h2 {
+
+    color: var(--cream);
+
+    font-family: var(--font-display);
+
+    font-size: 1.3rem;
+
+    letter-spacing: 3px;
+
+    font-weight: 500;
+}
+
+
+
+/* ==========================================================
+   DESCRIPCIÓN HERO
+========================================================== */
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin: 2rem auto;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+}
+
+
+
+/* ==========================================================
+   BOTÓN HERO
+========================================================== */
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 18px 34px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: var(--radius);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: var(--cream);
+
+    text-decoration: none;
+
+    letter-spacing: 2px;
+
+    font-size: 0.82rem;
+
+    transition: var(--transition);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.hero-button span {
+
+    color: var(--gold);
+
+    font-size: 1.2rem;
+}
+
+
+.hero-button:hover {
+
+    background: var(--gold);
+
+    color: var(--green-dark);
+}
+
+
+.hero-button:hover span {
+
+    color: var(--green-dark);
+}
+
+
+
+/* ==========================================================
+   NOSOTROS
+========================================================== */
+
+.about {
+
+    min-height: 650px;
+
+    padding: 100px 8%;
+
+    background: var(--cream);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+
+/* ==========================================================
+   IMAGEN NOSOTROS
+========================================================== */
+
+.about-image {
+
+    width: 100%;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+}
+
+
+.about-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+.about-image:hover img {
+
+    transform: scale(1.03);
+}
+
+
+
+/* ==========================================================
+   CONTENIDO NOSOTROS
+========================================================== */
+
+.about-content {
+
+    max-width: 560px;
+}
+
+
+.about-eyebrow {
+
+    color: var(--green);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.about h2 {
+
+    color: var(--green-dark);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: 1px;
+}
+
+
+.about-divider {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 28px 0;
+}
+
+
+.about-text {
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    margin-bottom: 18px;
+}
+
+
+.about-button {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 14px 28px;
+
+    border: 1px solid var(--green);
+
+    color: var(--green-dark);
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 1.5px;
+
+    transition: var(--transition);
+}
+
+
+.about-button:hover {
+
+    background: var(--green);
+
+    color: var(--cream);
+}
+
+
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.features {
+
+    background: var(--green-dark);
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 2rem;
+
+    padding: 2.5rem 8%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.feature-icon {
+
+    min-width: 48px;
+
+    color: var(--gold);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.feature-icon svg {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: block;
+}
+
+
+.feature h3 {
+
+    color: var(--cream);
+
+    font-size: 0.82rem;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 6px;
+
+    font-weight: 500;
+}
+
+
+.feature p {
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.74rem;
+
+    line-height: 1.5;
+}
+
+
+
+/* ==========================================================
+   HABITACIONES
+========================================================== */
+
+.rooms {
+
+    padding: 110px 8%;
+
+    background: var(--cream);
+}
+
+
+
+/* ==========================================================
+   HEADER HABITACIONES
+========================================================== */
+
+.rooms-header {
+
+    max-width: 800px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+.rooms-eyebrow {
+
+    color: var(--green);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+.rooms-header h2 {
+
+    color: var(--green-dark);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: 1px;
+}
+
+
+.rooms-description {
+
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+}
+
+
+
+/* ==========================================================
+   GRID HABITACIONES
+========================================================== */
+
+.rooms-grid {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+
+
+/* ==========================================================
+   CARD HABITACIÓN
+========================================================== */
+
+.room-card {
+
+    background: var(--white);
+
+    overflow: hidden;
+
+    border: 1px solid rgba(49, 72, 58, 0.10);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.room-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(32, 53, 42, 0.12);
+}
+
+
+
+/* ==========================================================
+   IMAGEN HABITACIÓN
+========================================================== */
+
+.room-image {
+
+    width: 100%;
+
+    height: 280px;
+
+    overflow: hidden;
+}
+
+
+.room-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+.room-card:hover .room-image img {
+
+    transform: scale(1.04);
+}
+
+
+
+/* ==========================================================
+   CONTENIDO CARD
+========================================================== */
+
+.room-content {
+
+    padding: 28px 30px 32px;
+}
+
+
+.room-number {
+
+    color: var(--green);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.room-content h3 {
+
+    color: var(--green-dark);
+
+    font-family: var(--font-display);
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+
+.room-description {
+
+    color: var(--text);
+
+    font-size: 0.8rem;
+
+    line-height: 1.7;
+
+    font-weight: 300;
+
+    margin-bottom: 22px;
+}
+
+
+
+/* ==========================================================
+   DETALLES HABITACIÓN
+========================================================== */
+
+.room-details {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(49, 72, 58, 0.12);
+}
+
+
+.room-details span {
+
+    color: var(--text);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.5px;
+}
+
+
+
+/* ==========================================================
+   BOTÓN HABITACIÓN
+========================================================== */
+
+.room-button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 22px;
+
+    border: 1px solid var(--green);
+
+    color: var(--green-dark);
+
+    text-decoration: none;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1.5px;
+
+    transition: var(--transition);
+}
+
+
+.room-button:hover {
+
+    background: var(--green);
+
+    color: var(--cream);
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE — TABLET GRANDE
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+
+        padding: 0 2rem;
+    }
+
+
+    .nav-menu {
+
+        gap: 1.3rem;
+    }
+
+
+    .features {
+
+        padding: 2.5rem 4%;
+    }
+
+
+    .rooms {
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .rooms-grid {
+
+        gap: 25px;
+    }
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE — TABLET
+========================================================== */
+
+@media (max-width: 850px) {
+
+    /* NAVBAR */
+
+    .navbar {
+
+        height: 80px;
+
+        padding: 0 1.5rem;
+    }
+
+
+    .nav-menu {
+
+        display: none;
+    }
+
+
+    .logo-name {
+
+        font-size: 1.5rem;
+    }
+
+
+    .logo-subtitle {
+
+        font-size: 0.45rem;
+    }
+
+
+
+    /* HERO */
+
+    .hero-content {
+
+        margin-top: 40px;
+    }
+
+
+    .hero-eyebrow {
+
+        font-size: 0.8rem;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 1rem;
+    }
+
+
+    .hero-description {
+
+        font-size: 0.9rem;
+    }
+
+
+
+    /* NOSOTROS */
+
+    .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 80px 8%;
+    }
+
+
+    .about-image {
+
+        height: 400px;
+    }
+
+
+    .about-content {
+
+        max-width: 100%;
+    }
+
+
+
+    /* FEATURES */
+
+    .features {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    /* HABITACIONES */
+
+    .rooms {
+
+        padding: 80px 6%;
+    }
+
+
+    .rooms-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE — MÓVIL
+========================================================== */
+
+@media (max-width: 500px) {
+
+    /* NAVBAR */
+
+    .logo-icon {
+
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .logo-name {
+
+        font-size: 1.2rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    .logo-subtitle {
+
+        letter-spacing: 2px;
+    }
+
+
+    .nav-button {
+
+        padding: 10px 16px;
+
+        font-size: 0.65rem;
+    }
+
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 720px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 4rem;
+    }
+
+
+    .hero-button {
+
+        width: 100%;
+    }
+
+
+
+    /* NOSOTROS */
+
+    .about {
+
+        padding: 70px 6%;
+    }
+
+
+    .about-image {
+
+        height: 320px;
+    }
+
+
+    .about h2 {
+
+        font-size: 2.5rem;
+    }
+
+
+
+    /* FEATURES */
+
+    .features {
+
+        grid-template-columns: 1fr;
+    }
+
+
+
+    /* HABITACIONES */
+
+    .rooms {
+
+        padding: 70px 6%;
+    }
+
+
+    .rooms-header {
+
+        margin-bottom: 45px;
+    }
+
+
+    .rooms-header h2 {
+
+        font-size: 2.5rem;
+    }
+
+
+    .rooms-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .room-image {
+
+        height: 260px;
+    }
+
+
+    .room-content {
+
+        padding: 25px;
+    }
+
+}
