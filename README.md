@@ -12,11 +12,11 @@ Landing page para Villa Pecas, un alojamiento turístico.
 ## Características
 
 - Página de inicio
-- Información de habitaciones
+- Información de los sitios de interés
 - Galería de imágenes
 - Información de contacto
 - Diseño responsive
-- Botón de contacto por WhatsApp
+- Botónes de contacto por WhatsApp
 
 ## Objetivo
 
@@ -32,4 +32,4 @@ sus habitaciones y espacios, facilitando el contacto con potenciales huéspedes.
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/...
+git clone https://github.com/EstebanBogota338/villa-pecas-landing
