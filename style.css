@@ -221,7 +221,7 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-    background-image: url("assets/images/hero.jpg");
+    background-image: url("img/hero.jpg");
     background-size: cover;
     background-position: center;
 }
