@@ -221,7 +221,7 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-    background-image: url("img/hero.jpg");
+    background-image: url("img/Hero.webp");
     background-size: cover;
     background-position: center;
 }
@@ -1070,7 +1070,7 @@ section.visible {
     }
     .hero-description {
         font-size: 0.9rem;
-    }
+    }   
     .about {
         grid-template-columns: 1fr;
         gap: 50px;
