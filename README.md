@@ -23,10 +23,6 @@ Landing page para Villa Pecas, un alojamiento turístico.
 Crear una landing page moderna y sencilla para presentar Villa Pecas,
 sus habitaciones y espacios, facilitando el contacto con potenciales huéspedes.
 
-## Capturas
-
-<!-- Agregar capturas de la página -->
-
 ## Instalación
 
 Clonar el repositorio:
