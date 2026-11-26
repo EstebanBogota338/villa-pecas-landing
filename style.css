@@ -221,7 +221,7 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-    background-image: url("img/Hero.webp");
+    background-image: url("assets/optimizado/Hero.webp");
     background-size: cover;
     background-position: center;
 }
@@ -638,7 +638,6 @@ body {
     width: 100%;
     min-width: 0; /* evita que el flex item se desborde en vez de scrollear */
     overflow-x: auto;
-    scroll-behavior: smooth;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
 }

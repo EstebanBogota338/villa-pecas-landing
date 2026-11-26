@@ -11,3 +11,7 @@ Thumbs.db
 
 # Logs
 *.log
+# Artefactos de revision generados (comparativas antes/despues).
+# No forman parte del sitio: no se despliegan.
+assets/comparativa-*.jpg
+assets/verificacion-zoom.jpg

@@ -13,10 +13,17 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="Villa Pecas | Eco-Friendly Luxury">
         <meta property="og:description" content="Un lugar eco-friendly para grupos de hasta 20 personas en Cumaral, Meta. Naturaleza, descanso y conexión.">
-        <meta property="og:image" content="assets/images/hero.jpg">
+        <meta property="og:image" content="assets/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:type" content="image/jpeg">
         <meta property="og:locale" content="es_CO">
 
         <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23315A46'/%3E%3Ctext x='50' y='68' font-family='Cormorant Garamond, Georgia, serif' font-size='52' font-weight='bold' fill='%23C4A968' text-anchor='middle' letter-spacing='-2'%3EVP%3C/text%3E%3C/svg%3E">
+
+        <!-- Hero = LCP. Es un background de style.css, asi que se precarga aqui
+             para que el navegador lo pida sin esperar a descubrirlo en el CSS. -->
+        <link rel="preload" as="image" href="assets/optimizado/Hero.webp" fetchpriority="high">
 
         <link rel="stylesheet" href="style.css">
 
@@ -29,7 +36,7 @@
             rel="stylesheet"
         >
 
-    </head>
+</head>
 
 <body>
 
@@ -258,7 +265,9 @@
     <div class="about-image">
 
         <img
-            src="img/Nosotros.webp"
+            src="assets/optimizado/Naturaleza.webp"
+            loading="lazy"
+            decoding="async"
             alt="Villa Pecas rodeada de naturaleza"
         >
 
@@ -576,7 +585,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/HabGrid.webp"
+                    src="assets/optimizado/HabGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Habitación con baño privado en Villa Pecas"
                 >
 
@@ -612,7 +623,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/PiscGrid.webp"
+                    src="assets/optimizado/PiscGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Piscina de Villa Pecas"
                 >
 
@@ -647,7 +660,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/TurcoGrid.webp"
+                    src="assets/optimizado/TurcoGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Turco de Villa Pecas"
                 >
 
@@ -682,7 +697,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/SHumedGrid.webp"
+                    src="assets/optimizado/SHumedGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Sala húmeda de Villa Pecas"
                 >
 
@@ -717,7 +734,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/SSecaGrid.webp"
+                    src="assets/optimizado/SSecaGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Sala seca de Villa Pecas"
                 >
 
@@ -752,7 +771,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/CocGrid.webp"
+                    src="assets/optimizado/CocGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Cocina equipada de Villa Pecas"
                 >
 
@@ -787,7 +808,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/BBQGrid.webp"
+                    src="assets/optimizado/BBQGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Zona BBQ de Villa Pecas"
                 >
 
@@ -822,7 +845,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/ParqGrid.webp"
+                    src="assets/optimizado/ParqGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Parqueadero privado de Villa Pecas"
                 >
 
@@ -856,7 +881,9 @@
             <div class="room-image">
 
                 <img
-                    src="img/ECafeGrid.jpg"
+                    src="assets/optimizado/ECafeGrid.webp"
+                    loading="lazy"
+                    decoding="async"
                     alt="Cafe bar villa pecas"
                 >
 
@@ -937,49 +964,61 @@
 
                 <div class="gallery-slide">
                     <img
-                        src="img/PiscGal.webp"
+                        src="assets/optimizado/PiscGal.webp"
+                        decoding="async"
                         alt="Piscina de Villa Pecas"
                     >
                 </div>
 
                 <div class="gallery-slide">
                     <img
-                        src="img/TurcGal.webp"
+                        src="assets/optimizado/TurcGal.webp"
+                        decoding="async"
                         alt="Turco de Villa Pecas"
                     >
                 </div>
 
                 <div class="gallery-slide">
                     <img
-                        src="img/SHumedGal.webp"
+                        src="assets/optimizado/SHumedGal.webp"
+                        loading="lazy"
+                        decoding="async"
                         alt="Sala húmeda de Villa Pecas"
                     >
                 </div>
 
                 <div class="gallery-slide">
                     <img
-                        src="img/SSecaGal.webp"
+                        src="assets/optimizado/SSecaGal.webp"
+                        loading="lazy"
+                        decoding="async"
                         alt="Sala seca de Villa Pecas"
                     >
                 </div>
 
                 <div class="gallery-slide">
                     <img
-                        src="img/CocGal.webp"
+                        src="assets/optimizado/CocGal.webp"
+                        loading="lazy"
+                        decoding="async"
                         alt="Cocina equipada de Villa Pecas"
                     >
                 </div>
 
                 <div class="gallery-slide">
                     <img
-                        src="img/BBQGal.webp"
+                        src="assets/optimizado/BBQGal.webp"
+                        loading="lazy"
+                        decoding="async"
                         alt="Zona BBQ de Villa Pecas"
                     >
                 </div>
 
                 <div class="gallery-slide">
                     <img
-                        src="img/ParqGal.webp"
+                        src="assets/optimizado/ParqGal.webp"
+                        loading="lazy"
+                        decoding="async"
                         alt="Parqueadero privado de Villa Pecas"
                     >
                 </div>
@@ -1006,8 +1045,10 @@
     <div class="contact-image">
 
         <img
-            src="img/TurcoGrid.webp"
-            alt="Villa Pecas rodeada de naturaleza"
+            src="assets/optimizado/TurcoGrid.webp"
+            loading="lazy"
+            decoding="async"
+            alt="Turco de Villa Pecas"
         >
 
     </div>
