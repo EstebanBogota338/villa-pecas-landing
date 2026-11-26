@@ -6,8 +6,10 @@
     --green-dark: #315A46;
     --green: #76A982;
     --green-light: #B8D8B5;
+    --green-ink: #3F6B50;    /* verde de texto sobre crema y blanco (5.32:1 / 6.01:1) */
     --cream: #F3EFE1;
     --gold: #C4A968;
+    --gold-light: #D8C48C;   /* dorado de texto sobre verde oscuro (4.55:1) */
     --white: #FEFDF8;
     --text-dark: #20352A;
     --text: #31483A;
@@ -106,9 +108,9 @@ body {
 
 .logo-subtitle {
     margin-top: 6px;
-    font-size: 0.55rem;
+    font-size: 0.7rem;
     letter-spacing: 3px;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 /* ==========================================================
@@ -203,6 +205,10 @@ body {
 ========================================================== */
 
 .nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
     padding: 14px 28px;
     border: 1px solid var(--gold);
     border-radius: 999px;
@@ -215,7 +221,7 @@ body {
 
 .nav-button:hover {
     background: var(--gold);
-    color: var(--green-dark);
+    color: var(--text-dark);
 }
 
 /* ==========================================================
@@ -297,7 +303,7 @@ body {
     color: rgba(255, 255, 255, 0.92);
     font-size: 1rem;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .hero-button {
@@ -324,11 +330,11 @@ body {
 
 .hero-button:hover {
     background: var(--gold);
-    color: var(--green-dark);
+    color: var(--text-dark);
 }
 
 .hero-button:hover span {
-    color: var(--green-dark);
+    color: var(--text-dark);
 }
 
 /* ==========================================================
@@ -369,7 +375,7 @@ body {
 }
 
 .about-eyebrow {
-    color: var(--green);
+    color: var(--green-ink);
     font-size: 0.75rem;
     letter-spacing: 4px;
     margin-bottom: 20px;
@@ -393,9 +399,9 @@ body {
 
 .about-text {
     color: var(--text);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.9;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 18px;
 }
 
@@ -412,7 +418,7 @@ body {
 }
 
 .about-button:hover {
-    background: var(--green);
+    background: var(--green-dark);
     color: var(--cream);
 }
 
@@ -451,7 +457,7 @@ body {
 
 .feature h3 {
     color: var(--cream);
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     letter-spacing: 1.5px;
     margin-bottom: 6px;
     font-weight: 500;
@@ -459,7 +465,7 @@ body {
 
 .feature p {
     color: rgba(255, 255, 255, 0.72);
-    font-size: 0.74rem;
+    font-size: 0.82rem;
     line-height: 1.5;
 }
 
@@ -479,7 +485,7 @@ body {
 }
 
 .rooms-eyebrow {
-    color: var(--green);
+    color: var(--green-ink);
     font-size: 0.75rem;
     letter-spacing: 4px;
     margin-bottom: 18px;
@@ -498,9 +504,9 @@ body {
     max-width: 600px;
     margin: 25px auto 0;
     color: var(--text);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .rooms-grid {
@@ -546,8 +552,8 @@ body {
 }
 
 .room-number {
-    color: var(--green);
-    font-size: 0.65rem;
+    color: var(--green-ink);
+    font-size: 0.7rem;
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
@@ -563,9 +569,9 @@ body {
 
 .room-description {
     color: var(--text);
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 0;
 }
 
@@ -584,8 +590,8 @@ body {
 }
 
 .rooms-extras-label {
-    color: var(--green);
-    font-size: 0.65rem;
+    color: var(--green-ink);
+    font-size: 0.7rem;
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -625,7 +631,7 @@ body {
 }
 
 .gallery-eyebrow {
-    color: var(--gold);
+    color: var(--gold-light);
     font-size: 0.75rem;
     letter-spacing: 4px;
     margin-bottom: 18px;
@@ -644,9 +650,9 @@ body {
     max-width: 600px;
     margin: 25px auto 0;
     color: rgba(255, 255, 255, 0.72);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .gallery-category {
@@ -663,8 +669,8 @@ body {
 }
 
 .gallery-category-header p {
-    color: var(--gold);
-    font-size: 0.65rem;
+    color: var(--gold-light);
+    font-size: 0.7rem;
     letter-spacing: 3px;
     margin-bottom: 8px;
 }
@@ -836,9 +842,9 @@ body {
 
 .contact-text {
     color: rgba(255, 255, 255, 0.78);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.9;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 35px;
 }
 
@@ -863,8 +869,8 @@ body {
 
 .contact-detail-label {
     display: block;
-    color: var(--gold);
-    font-size: 0.6rem;
+    color: var(--gold-light);
+    font-size: 0.7rem;
     letter-spacing: 2px;
     margin-bottom: 5px;
 }
@@ -872,8 +878,8 @@ body {
 .contact-detail-value {
     display: block;
     color: var(--cream);
-    font-size: 0.78rem;
-    font-weight: 300;
+    font-size: 0.82rem;
+    font-weight: 400;
 }
 
 .contact-whatsapp {
@@ -884,8 +890,8 @@ body {
 
 .contact-whatsapp-label {
     display: block;
-    color: var(--gold);
-    font-size: 0.6rem;
+    color: var(--gold-light);
+    font-size: 0.7rem;
     letter-spacing: 2px;
     margin-bottom: 7px;
 }
@@ -918,11 +924,11 @@ body {
 
 .contact-button:hover {
     background: var(--gold);
-    color: var(--green-dark);
+    color: var(--text-dark);
 }
 
 .contact-button:hover span {
-    color: var(--green-dark);
+    color: var(--text-dark);
 }
 
 /* ==========================================================
@@ -967,7 +973,7 @@ body {
 }
 
 .footer-subtitle {
-    font-size: 0.55rem;
+    font-size: 0.7rem;
     letter-spacing: 3px;
     opacity: 0.7;
     margin-bottom: 25px;
@@ -983,7 +989,7 @@ body {
 /* COLUMNAS */
 .footer-label {
     color: var(--gold);
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
@@ -996,13 +1002,16 @@ body {
 .footer-navigation {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
 }
 
 .footer-navigation a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     transition: var(--transition);
 }
 
@@ -1022,6 +1031,18 @@ body {
     font-size: 1.2rem;
 }
 
+.footer-phone-link {
+    color: var(--cream);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.footer-phone-link:hover {
+    color: var(--gold);
+}
+
 /* PARTE INFERIOR */
 .footer-bottom {
     max-width: 1400px;
@@ -1034,8 +1055,8 @@ body {
 }
 
 .footer-bottom p {
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.7rem;
     letter-spacing: 0.5px;
 }
 
@@ -1084,7 +1105,7 @@ section {
         gap: 1.3rem;
     }
     .features {
-        padding: 2.5rem 4%;
+    padding: 2.5rem 6%;
     }
     .rooms {
         padding: 100px 6%;
@@ -1156,7 +1177,7 @@ section {
         font-size: 1.5rem;
     }
     .logo-subtitle {
-        font-size: 0.45rem;
+    font-size: 0.65rem;
     }
     .hero-content {
         margin-top: 40px;
@@ -1172,9 +1193,9 @@ section {
         font-size: 0.9rem;
     }   
     .about {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        padding: 80px 8%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 80px 6%;
     }
     .about-image {
         height: 400px;
@@ -1199,9 +1220,9 @@ section {
         font-size: 2rem;
     }
     .contact {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        padding: 80px 8%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 80px 6%;
     }
     .contact-image {
         height: 400px;
@@ -1259,12 +1280,12 @@ section {
         letter-spacing: 2px;
     }
     .logo-subtitle {
-        font-size: 0.4rem;
-        letter-spacing: 2px;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
     }
     .nav-button {
-        padding: 10px 16px;
-        font-size: 0.65rem;
+    padding: 12px 18px;
+    font-size: 0.7rem;
     }
     .nav-toggle-label {
         margin-right: 12px;
@@ -1321,9 +1342,9 @@ section {
         text-align: center;
     }
     .features {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 2.5rem 8%;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 6%;
     }
     .rooms {
         padding: 70px 6%;
@@ -1351,7 +1372,7 @@ section {
         font-size: 1.8rem;
     }
     .room-description {
-        font-size: 0.8rem;
+    font-size: 0.875rem;
     }
     .gallery {
         padding: 60px 6%;
@@ -1465,4 +1486,16 @@ input:focus-visible,
 /* Sobre fondo claro el dorado solo da 2.35:1, asi que se oscurece */
 .about a:focus-visible {
     outline-color: var(--green-dark);
+}
+
+/* ==========================================================
+   NAVBAR EN PANTALLAS MUY ESTRECHAS
+   A 360px el logo + hamburguesa + CTA no caben: se oculta el
+   subtitulo (el nombre completo sigue en el hero y el footer).
+========================================================== */
+
+@media (max-width: 420px) {
+    .logo-subtitle {
+        display: none;
+    }
 }
