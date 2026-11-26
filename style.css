@@ -1520,6 +1520,18 @@ input:focus-visible,
     .logo-subtitle {
         display: none;
     }
+
+    /* Sin el subtitulo caben los tres elementos, pero el logo y el CTA
+       dejan la hamburguesa pegada al texto: se compactan para dar aire. */
+    .logo-name {
+        font-size: 1.05rem;
+        letter-spacing: 1.5px;
+    }
+
+    .nav-button {
+        padding: 0 14px;
+        font-size: 0.65rem;
+    }
 }
 
 /* ==========================================================
