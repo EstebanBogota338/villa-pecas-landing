@@ -707,80 +707,69 @@
 
         <div class="gallery-carousel">
 
-            <button type="button" class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
-                ←
-            </button>
+            <div class="gallery-track"
+                 role="group"
+                 aria-roledescription="carrusel"
+                 aria-label="Fotos de los espacios de Villa Pecas"
+                 tabindex="0">
 
-
-            <div class="gallery-track">
-
-                <div class="gallery-slide">
-                    <img
-                        src="assets/optimizado/PiscGal.webp"
-                        decoding="async"
-                        alt="Piscina de Villa Pecas"
-                    >
+                <!-- 1 -->
+                <div class="gallery-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 7">
+                    <img src="assets/optimizado/TurcGal.webp" decoding="async"
+                         alt="Vista panorámica al valle y a la piscina desde el turco de Villa Pecas">
                 </div>
 
-                <div class="gallery-slide">
-                    <img
-                        src="assets/optimizado/TurcGal.webp"
-                        decoding="async"
-                        alt="Turco de Villa Pecas"
-                    >
+                <!-- 2 -->
+                <div class="gallery-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 7">
+                    <img src="assets/optimizado/PiscGal.webp" decoding="async"
+                         alt="Piscina de Villa Pecas con vista abierta al paisaje">
                 </div>
 
-                <div class="gallery-slide">
-                    <img
-                        src="assets/optimizado/SHumedGal.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="Sala húmeda de Villa Pecas"
-                    >
+                <!-- 3 -->
+                <div class="gallery-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 7">
+                    <img src="assets/optimizado/BBQGal.webp" loading="lazy" decoding="async"
+                         alt="Asado en la zona BBQ de Villa Pecas">
                 </div>
 
-                <div class="gallery-slide">
-                    <img
-                        src="assets/optimizado/SSecaGal.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="Sala seca de Villa Pecas"
-                    >
+                <!-- 4 -->
+                <div class="gallery-slide" role="group" aria-roledescription="diapositiva" aria-label="4 de 7">
+                    <img src="assets/optimizado/SHumedGal.webp" loading="lazy" decoding="async"
+                         alt="Terraza de Villa Pecas con vista panorámica al valle">
                 </div>
 
-                <div class="gallery-slide">
-                    <img
-                        src="assets/optimizado/CocGal.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="Cocina equipada de Villa Pecas"
-                    >
+                <!-- 5 -->
+                <div class="gallery-slide" role="group" aria-roledescription="diapositiva" aria-label="5 de 7">
+                    <img src="assets/optimizado/CocGal.webp" loading="lazy" decoding="async"
+                         alt="Cocina equipada de Villa Pecas con barra y sillas altas">
                 </div>
 
-                <div class="gallery-slide">
-                    <img
-                        src="assets/optimizado/BBQGal.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="Zona BBQ de Villa Pecas"
-                    >
+                <!-- 6 -->
+                <div class="gallery-slide" role="group" aria-roledescription="diapositiva" aria-label="6 de 7">
+                    <img src="assets/optimizado/SSecaGal.webp" loading="lazy" decoding="async"
+                         alt="Sala de estar con televisor en Villa Pecas">
                 </div>
 
-                <div class="gallery-slide">
-                    <img
-                        src="assets/optimizado/ParqGal.webp"
-                        loading="lazy"
-                        decoding="async"
-                        alt="Parqueadero privado de Villa Pecas"
-                    >
+                <!-- 7 -->
+                <div class="gallery-slide" role="group" aria-roledescription="diapositiva" aria-label="7 de 7">
+                    <img src="assets/optimizado/ParqGal.webp" loading="lazy" decoding="async"
+                         alt="Parqueadero privado de Villa Pecas">
                 </div>
 
             </div>
 
+            <div class="gallery-controls">
 
-            <button type="button" class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
-                →
-            </button>
+                <button type="button" class="gallery-arrow gallery-prev" aria-label="Imagen anterior">
+                    ←
+                </button>
+
+                <p class="gallery-counter" aria-live="polite">1 / 7</p>
+
+                <button type="button" class="gallery-arrow gallery-next" aria-label="Imagen siguiente">
+                    →
+                </button>
+
+            </div>
 
         </div>
 
