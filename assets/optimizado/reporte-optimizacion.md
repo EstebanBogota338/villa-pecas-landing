@@ -9,7 +9,7 @@ Generado por `scripts/optimizar_imagenes.py`. Los originales de `img/`
 | --- | --- | --- |
 | HTML + CSS + JS | 60 KB | 60 KB |
 | Imagenes | 16.90 MB | 1.46 MB |
-| **Lo que descarga el visitante** | **16.95 MB** | **1.52 MB** |
+| **Lo que descarga el visitante** | **16.96 MB** | **1.52 MB** |
 | `og:image` (solo previews de enlaces, no la descarga el visitante) | — | 111 KB |
 
 Reduccion de la pagina: **91.0%** (15.43 MB menos en imagenes).
