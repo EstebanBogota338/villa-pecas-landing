@@ -32,6 +32,19 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 121px; /* 105px navbar + 16px de aire */
+}
+
+@media (max-width: 850px) {
+    html {
+        scroll-padding-top: 96px; /* 80px navbar + 16px de aire */
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
@@ -1028,17 +1041,35 @@ body {
 
 /* ==========================================================
    ANIMACIONES AL HACER SCROLL
+   Solo se oculta si <html> tiene la clase .js (la añade el
+   script del <head>). Si JS falla, el contenido se ve igual.
 ========================================================== */
 
 section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+.js section:not(.hero):not(.visible) {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    section {
+        transition: none;
+    }
+
+    .js section:not(.hero):not(.visible) {
+        opacity: 1;
+        transform: none;
+    }
+
+    .room-image img,
+    .about-image img,
+    .contact-image img,
+    .gallery-slide img {
+        transition: none;
+    }
 }
 
 /* ==========================================================
@@ -1417,4 +1448,21 @@ section.visible {
     .gallery-slide {
         flex: 0 0 88%;
     }
+}
+
+/* ==========================================================
+   FOCO VISIBLE
+========================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Sobre fondo claro el dorado solo da 2.35:1, asi que se oscurece */
+.about a:focus-visible {
+    outline-color: var(--green-dark);
 }
