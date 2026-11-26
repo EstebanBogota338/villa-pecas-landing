@@ -6,18 +6,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Villa Pecas | Eco-Friendly Luxury</title>
+        <title>Villa Pecas | Villa con piscina para grupos en Restrepo, Meta</title>
 
-        <meta name="description" content="Villa Pecas: villa de lujo eco-friendly en Cumaral, Meta, para grupos de hasta 20 personas. Piscina, turco, sala húmeda y seca, cocina equipada y zona BBQ rodeados de naturaleza.">
+        <meta name="description" content="Villa de lujo para grupos de hasta 22 en Restrepo, Meta: piscina con vista al valle, turco, BBQ y 7 habitaciones con baño. Cotiza por WhatsApp.">
+
+        <link rel="canonical" href="https://estebanbogota338.github.io/villa-pecas-landing/">
 
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Villa Pecas | Eco-Friendly Luxury">
-        <meta property="og:description" content="Un lugar eco-friendly para grupos de hasta 20 personas en Cumaral, Meta. Naturaleza, descanso y conexión.">
-        <meta property="og:image" content="assets/og-image.jpg">
+        <meta property="og:site_name" content="Villa Pecas">
+        <meta property="og:title" content="Villa Pecas | Villa con piscina para grupos en Restrepo, Meta">
+        <meta property="og:description" content="Un lugar eco-friendly para grupos de hasta 22 personas en Restrepo, Meta. Piscina con vista al valle, turco, BBQ y naturaleza.">
+        <meta property="og:url" content="https://estebanbogota338.github.io/villa-pecas-landing/">
+        <meta property="og:image" content="https://estebanbogota338.github.io/villa-pecas-landing/assets/og-image.jpg">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
         <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:alt" content="Piscina de Villa Pecas con vista al valle en Restrepo, Meta">
         <meta property="og:locale" content="es_CO">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Villa Pecas | Villa con piscina para grupos en Restrepo, Meta">
+        <meta name="twitter:description" content="Piscina con vista al valle, turco, BBQ y 7 habitaciones para grupos de hasta 22 en Restrepo, Meta.">
+        <meta name="twitter:image" content="https://estebanbogota338.github.io/villa-pecas-landing/assets/og-image.jpg">
+
+        <meta name="theme-color" content="#315A46">
 
         <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23315A46'/%3E%3Ctext x='50' y='68' font-family='Cormorant Garamond, Georgia, serif' font-size='52' font-weight='bold' fill='%23C4A968' text-anchor='middle' letter-spacing='-2'%3EVP%3C/text%3E%3C/svg%3E">
 
@@ -39,9 +51,41 @@
             rel="stylesheet"
         >
 
-</head>
+
+        <!-- Datos estructurados: Google sabe que es un alojamiento -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LodgingBusiness",
+          "name": "Villa Pecas",
+          "description": "Villa de lujo eco-friendly en Restrepo, Meta, para grupos de hasta 22 personas. Piscina con vista al valle, turco, terraza, cocina equipada y zona BBQ.",
+          "url": "https://estebanbogota338.github.io/villa-pecas-landing/",
+          "image": "https://estebanbogota338.github.io/villa-pecas-landing/assets/og-image.jpg",
+          "telephone": "+573108137862",
+          "priceRange": "Desde $60.000 COP por persona",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Restrepo",
+            "addressRegion": "Meta",
+            "addressCountry": "CO"
+          },
+          "numberOfRooms": 7,
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Piscina", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Turco", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Terraza con vista", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Sala de estar con TV", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Cocina equipada", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Zona BBQ", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parqueadero privado", "value": true }
+          ]
+        }
+        </script>
+    </head>
 
 <body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 
 <!-- ===================================================== NAVBAR ====================================================== -->
@@ -57,12 +101,11 @@
         class="logo-icon"
         viewBox="0 0 600 500"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="Logo Villa Pecas"
+        aria-hidden="true"
+        focusable="false"
         >
         <defs>
             <style>
-            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;display=swap');
-
             .bg-rect {
                 fill: #315A46;
             }
@@ -154,7 +197,7 @@
 
 <!-- ===== NAVEGACIÓN ===== -->
 
-<nav class="nav-menu">
+<nav class="nav-menu" aria-label="Navegación principal">
 
     <a href="#inicio">
         INICIO
@@ -198,7 +241,7 @@
 ====================================================== -->
 
 
-<main>
+<main id="contenido">
 
 
 <!-- =====================================================
@@ -213,7 +256,7 @@
 
     <div class="hero-content">
 
-        <div class="hero-symbol">
+        <div class="hero-symbol" aria-hidden="true">
             ✦
         </div>
 
@@ -223,22 +266,18 @@
         </p>
 
 
-        <h1>
-            VILLA PECAS
+        <h1 class="hero-title">
+            <span class="hero-title-brand">VILLA PECAS</span>
+            <span class="hero-title-claim">Villa de lujo con piscina en Restrepo, Meta</span>
         </h1>
 
 
         <div class="hero-divider"></div>
 
 
-        <h2>
-            UNA EXPERIENCIA DE LUJO, VERDE Y FAMILIAR
-        </h2>
-
-
         <p class="hero-description">
             Un lugar eco friendly diseñado para grupos de hasta
-            20 personas, donde la naturaleza y el confort se
+            22 personas, donde la naturaleza y el confort se
             encuentran para crear recuerdos inolvidables.
         </p>
 
@@ -425,7 +464,7 @@
         <div>
 
             <h3>
-                GRUPOS DE 20
+                HASTA 22 PERSONAS
             </h3>
 
             <p>
@@ -824,74 +863,59 @@
         <div class="contact-details">
 
             <div class="contact-detail">
-
-                <span class="contact-detail-icon">📍</span>
-
+                <span class="contact-detail-icon" aria-hidden="true">💰</span>
                 <div>
-                    <span class="contact-detail-label">
-                        UBICACIÓN
-                    </span>
-
-                    <span class="contact-detail-value">
-                        Cumaral, Meta
-                    </span>
+                    <span class="contact-detail-label">TEMPORADA ALTA</span>
+                    <span class="contact-detail-value">$60.000 por persona</span>
                 </div>
-
             </div>
 
-
             <div class="contact-detail">
-
-                <span class="contact-detail-icon">👥</span>
-
+                <span class="contact-detail-icon" aria-hidden="true">🏡</span>
                 <div>
-                    <span class="contact-detail-label">
-                        CAPACIDAD
-                    </span>
-
-                    <span class="contact-detail-value">
-                        Hasta 20 personas
-                    </span>
+                    <span class="contact-detail-label">CASA COMPLETA</span>
+                    <span class="contact-detail-value">$1.320.000</span>
                 </div>
-
             </div>
 
-
             <div class="contact-detail">
-
-                <span class="contact-detail-icon">🚗</span>
-
+                <span class="contact-detail-icon" aria-hidden="true">👥</span>
                 <div>
-                    <span class="contact-detail-label">
-                        COMODIDAD
-                    </span>
-
-                    <span class="contact-detail-value">
-                        Parqueadero privado
-                    </span>
+                    <span class="contact-detail-label">CAPACIDAD</span>
+                    <span class="contact-detail-value">Hasta 22 personas</span>
                 </div>
-
             </div>
 
+            <div class="contact-detail">
+                <span class="contact-detail-icon" aria-hidden="true">📍</span>
+                <div>
+                    <span class="contact-detail-label">UBICACIÓN</span>
+                    <span class="contact-detail-value">Restrepo, Meta</span>
+                </div>
+            </div>
 
             <div class="contact-detail">
-
-                <span class="contact-detail-icon">🏊</span>
-
+                <span class="contact-detail-icon" aria-hidden="true">🚗</span>
                 <div>
-                    <span class="contact-detail-label">
-                        RECREACIÓN
-                    </span>
-
-                    <span class="contact-detail-value">
-                        Piscina
-                    </span>
+                    <span class="contact-detail-label">COMODIDAD</span>
+                    <span class="contact-detail-value">Parqueadero privado</span>
                 </div>
+            </div>
 
+            <div class="contact-detail">
+                <span class="contact-detail-icon" aria-hidden="true">🏊</span>
+                <div>
+                    <span class="contact-detail-label">RECREACIÓN</span>
+                    <span class="contact-detail-value">Piscina</span>
+                </div>
             </div>
 
         </div>
 
+        <p class="contact-price-note">
+            Tarifas de temporada alta. Escríbenos para conocer
+            la disponibilidad y las tarifas de otras fechas.
+        </p>
 
         <div class="contact-whatsapp">
 
@@ -937,13 +961,13 @@
 
         <div class="footer-brand">
 
-            <div class="footer-symbol">
+            <div class="footer-symbol" aria-hidden="true">
                 ✦
             </div>
 
-            <h2>
+            <p class="footer-brand-name">
                 VILLA PECAS
-            </h2>
+            </p>
 
             <p class="footer-subtitle">
                 ECO · FRIENDLY LUXURY
@@ -962,9 +986,9 @@
                 UBICACIÓN
             </p>
 
-            <p>
-                Cumaral, Meta
-            </p>
+            <address class="footer-address">
+                Restrepo, Meta
+            </address>
 
         </div>
 

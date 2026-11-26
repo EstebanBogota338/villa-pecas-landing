@@ -15,7 +15,13 @@
     --text: #31483A;
     --text-light: #F7F3E8;
     --navbar-bg: rgba(49, 90, 70, 0.90);
-    --overlay: linear-gradient(rgba(49, 90, 70, 0.05), rgba(49, 90, 70, 0.25));
+    --overlay: linear-gradient(
+        180deg,
+        rgba(17, 29, 22, 0.65) 0%,
+        rgba(17, 29, 22, 0.42) 30%,
+        rgba(17, 29, 22, 0.55) 60%,
+        rgba(17, 29, 22, 0.88) 100%
+    );
     --font-display: "Cormorant Garamond", serif;
     --font-body: "Montserrat", sans-serif;
     --transition: all 0.3s ease;
@@ -257,6 +263,7 @@ body {
     width: min(900px, 90%);
     text-align: center;
     margin-top: 80px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
 .hero-symbol {
@@ -273,13 +280,28 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.hero h1 {
-    color: var(--white);
+.hero-title {
     font-family: var(--font-display);
-    font-size: clamp(5rem, 9vw, 8rem);
     font-weight: 500;
+    line-height: 0.9;
+}
+
+.hero-title-brand {
+    display: block;
+    color: var(--white);
+    font-size: clamp(5rem, 9vw, 8rem);
     letter-spacing: 5px;
     line-height: 0.9;
+}
+
+.hero-title-claim {
+    display: block;
+    margin-top: 1.4rem;
+    color: var(--cream);
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .hero-divider {
@@ -289,13 +311,6 @@ body {
     margin: 2rem auto;
 }
 
-.hero h2 {
-    color: var(--cream);
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    letter-spacing: 3px;
-    font-weight: 500;
-}
 
 .hero-description {
     max-width: 650px;
@@ -852,7 +867,14 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 35px;
-    margin-bottom: 35px;
+    margin-bottom: 18px;
+}
+
+.contact-price-note {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
 }
 
 .contact-detail {
@@ -964,7 +986,7 @@ body {
     margin-bottom: 12px;
 }
 
-.footer-brand h2 {
+.footer-brand-name {
     font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 500;
@@ -1186,8 +1208,8 @@ section {
         font-size: 0.8rem;
         letter-spacing: 3px;
     }
-    .hero h2 {
-        font-size: 1rem;
+    .hero-title-claim {
+        font-size: 0.95rem;
     }
     .hero-description {
         font-size: 0.9rem;
@@ -1305,13 +1327,13 @@ section {
         letter-spacing: 2px;
         line-height: 1.5;
     }
-    .hero h1 {
+    .hero-title-brand {
         font-size: 4rem;
         letter-spacing: 3px;
     }
-    .hero h2 {
+    .hero-title-claim {
         font-size: 0.9rem;
-        letter-spacing: 2px;
+        letter-spacing: 0.5px;
         line-height: 1.5;
     }
     .hero-description {
@@ -1432,7 +1454,7 @@ section {
     .footer-bottom p {
         font-size: 0.6rem;
     }
-    .footer-brand h2 {
+    .footer-brand-name {
         font-size: 1.6rem;
     }
     .footer-tagline {
@@ -1497,5 +1519,40 @@ input:focus-visible,
 @media (max-width: 420px) {
     .logo-subtitle {
         display: none;
+    }
+}
+
+/* ==========================================================
+   SKIP LINK Y ADDRESS DEL FOOTER
+========================================================== */
+
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -120%);
+    padding: 14px 24px;
+    background: var(--cream);
+    color: var(--green-dark);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+    transform: translate(-50%, 0);
+}
+
+.footer-address {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skip-link {
+        transition: none;
     }
 }
