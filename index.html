@@ -87,6 +87,20 @@
 
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-text" hidden>
+
+    <div class="cookie-text" id="cookie-text">
+        <strong id="cookie-title">Cookies y analítica</strong>
+        <span>Usamos Google Analytics para entender cómo se usa la página y mejorarla. Puedes aceptar o rechazar.</span>
+    </div>
+
+    <div class="cookie-actions">
+        <button type="button" class="cookie-btn cookie-btn-accept" data-consent="granted">Aceptar</button>
+        <button type="button" class="cookie-btn cookie-btn-reject" data-consent="denied">Rechazar</button>
+    </div>
+
+</div>
+
 
 <!-- ===================================================== NAVBAR ====================================================== -->
 
@@ -226,7 +240,7 @@
 
 <a
     href="https://wa.me/573108137862?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
-    class="nav-button"
+    class="nav-button" data-cta="navbar"
     target="_blank"
     rel="noopener"
 >
@@ -285,7 +299,7 @@
         <!--  BOTÓN HERO → WHATSAPP -->
         <a
             href="https://wa.me/573108137862?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
-            class="hero-button"
+            class="hero-button" data-cta="hero"
             target="_blank"
             rel="noopener"
         >
@@ -925,7 +939,7 @@
 
             <a
                 href="https://wa.me/573108137862?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
-                class="contact-whatsapp-number"
+                class="contact-whatsapp-number" data-cta="contacto-numero"
                 target="_blank"
                 rel="noopener"
             >
@@ -937,7 +951,7 @@
 
         <a
             href="https://wa.me/573108137862?text=Hola%2C%20quiero%20consultar%20disponibilidad%20en%20Villa%20Pecas"
-            class="contact-button"
+            class="contact-button" data-cta="contacto-boton"
             target="_blank"
             rel="noopener"
         >
@@ -1026,7 +1040,7 @@
                 href="https://wa.me/573108137862?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
                 target="_blank"
                 rel="noopener"
-                class="footer-phone-link"
+                class="footer-phone-link" data-cta="footer"
             >
                 +57 310 813 7862
             </a>
@@ -1051,6 +1065,7 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script src="js/analytics.js" defer></script>
 
 </body>
 
