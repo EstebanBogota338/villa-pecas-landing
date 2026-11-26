@@ -557,6 +557,45 @@ body {
 }
 
 /* ==========================================================
+   EXTRAS DEL GRID (chips)
+========================================================== */
+
+.rooms-extras {
+    max-width: 1400px;
+    margin: 48px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px 20px;
+}
+
+.rooms-extras-label {
+    color: var(--green);
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.rooms-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.room-chip {
+    padding: 10px 18px;
+    border: 1px solid rgba(49, 90, 70, 0.22);
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 0.78rem;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================================
    GALERÍA
 ========================================================== */
 
