@@ -298,9 +298,9 @@ body {
     display: block;
     margin-top: 1.4rem;
     color: var(--cream);
-    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    font-size: clamp(1.25rem, 2.2vw, 1.7rem);
     letter-spacing: 1px;
-    line-height: 1.5;
+    line-height: 1.35;
     font-weight: 500;
 }
 
@@ -1209,7 +1209,7 @@ section {
         letter-spacing: 3px;
     }
     .hero-title-claim {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
     }
     .hero-description {
         font-size: 0.9rem;
@@ -1324,7 +1324,7 @@ section {
     }
     .hero-eyebrow {
         font-size: 0.7rem;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
         line-height: 1.5;
     }
     .hero-title-brand {
@@ -1332,9 +1332,9 @@ section {
         letter-spacing: 3px;
     }
     .hero-title-claim {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
         letter-spacing: 0.5px;
-        line-height: 1.5;
+        line-height: 1.35;
     }
     .hero-description {
         font-size: 0.85rem;
