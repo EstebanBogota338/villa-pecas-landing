@@ -1648,3 +1648,71 @@ input:focus-visible,
 .cookie-btn-reject:hover {
     border-color: var(--green-dark);
 }
+
+/* ==========================================================
+   SELECTOR DE IDIOMA
+========================================================== */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+}
+
+.lang-switch:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+/* Banderas dibujadas en SVG: los emoji de bandera no se pintan en Windows
+   (se ven como las letras CO / US). */
+.lang-flag {
+    display: block;
+    width: 20px;
+    height: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.lang-switch-code {
+    font-weight: 500;
+    line-height: 1;
+}
+
+.lang-menu-item {
+    display: none;
+}
+
+/* En movil el selector viaja al menu desplegable: en el navbar no cabe
+   junto al logo y al CTA. */
+@media (max-width: 600px) {
+    .nav-actions .lang-switch {
+        display: none;
+    }
+
+    .nav-menu .lang-menu-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+}
