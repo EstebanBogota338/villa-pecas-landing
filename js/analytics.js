@@ -58,6 +58,13 @@
     function hideBanner() {
         if (banner) banner.hidden = true;
         document.removeEventListener('keydown', onKeydown);
+        syncBannerState();
+    }
+
+    /* La barra fija de reserva y el aviso de cookies comparten el borde
+       inferior: mientras el aviso esta abierto, la barra se esconde. */
+    function syncBannerState() {
+        document.documentElement.classList.toggle('has-banner', !!(banner && !banner.hidden));
     }
 
     var stored = readConsent();
@@ -67,6 +74,7 @@
     } else if (stored !== 'denied' && banner) {
         banner.hidden = false;
         document.addEventListener('keydown', onKeydown);
+        syncBannerState();
     }
 
     if (banner) {
