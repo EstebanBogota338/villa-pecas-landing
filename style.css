@@ -1862,3 +1862,125 @@ input:focus-visible,
 .room-cta:hover .room-cta-arrow {
     transform: translateX(4px);
 }
+
+/* ==========================================================
+   PREGUNTAS FRECUENTES
+========================================================== */
+
+.faq {
+    padding: 110px 8%;
+    background: var(--cream);
+}
+
+.faq-header {
+    max-width: 800px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.faq-eyebrow {
+    color: var(--green-ink);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.faq-header h2 {
+    color: var(--green-dark);
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: 1px;
+}
+
+.faq-description {
+    max-width: 600px;
+    margin: 25px auto 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(49, 90, 70, 0.16);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(49, 90, 70, 0.16);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 64px;
+    padding: 22px 0;
+    cursor: pointer;
+    list-style: none;
+    color: var(--green-dark);
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 500;
+    line-height: 1.3;
+    transition: color 0.25s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question:hover {
+    color: var(--green);
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--green-ink);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding-bottom: 26px;
+}
+
+.faq-answer p {
+    max-width: 720px;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .faq-icon {
+        transition: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .faq {
+        padding: 70px 6%;
+    }
+
+    .faq-question {
+        gap: 16px;
+        font-size: 1.1rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.92rem;
+    }
+}
