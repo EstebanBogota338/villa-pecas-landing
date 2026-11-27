@@ -83,7 +83,7 @@ Trazabilidad entre el informe de conversión y las tareas de este documento.
 | El precio no dice cuánto paga un grupo menor | Equivalencia condicionada + CTA de ajuste | 1.1, 1.6 |
 | 13 enlaces a WhatsApp con 4 mensajes distintos | Un mensaje genérico + variantes de tarjeta controladas | 1.3 |
 | El hero grita la marca (128 px) y susurra la propuesta (16 px) | Subir el *claim* y reescribirlo con datos | 1.4 |
-| No hay condiciones de reserva | Bloque `#condiciones` | 1.5 |
+| No hay condiciones de reserva | Bloque `#condiciones` **retirado**: solo repetía lo ya dicho y su título prometía un contrato inexistente | 1.5 (diferida a Fase 3) |
 | "Nosotros" gasta una pantalla sin decir nada | Reemplazo por argumentos verificables | 1.7 |
 | Sin `sitemap.xml` ni `robots.txt` | Añadirlos | 2.1, 2.2 |
 | La `og-image` es una foto sin marca ni oferta | Rehacerla con claim y tarifa | 2.4 |
@@ -415,9 +415,17 @@ parte en tres líneas, reducirlo a `PARA GRUPOS DE HASTA 22` en `.hero-eyebrow`.
 ### 1.5 Bloque "Condiciones de Reserva"
 
 **Archivos:** `index.html`, `en/index.html`, `style.css`
-**Estado:** abierta (con contenido parcial, ver §7)
-**Ubicación:** sección nueva entre `#faq` y `#contacto`.
+**Estado:** 🔒 **DIFERIDA a Fase 3** — la sección llegó a publicarse en la rama y se retiró.
+**Ubicación prevista:** sección nueva entre `#faq` y `#contacto`.
 **Id:** `condiciones` (el mismo en ambos idiomas).
+
+> **Por qué se difiere.** La primera versión del bloque se construyó solo con lo que no
+> estaba bloqueado en §7, y el resultado fue siete filas que repetían el precio, la
+> exclusividad y los mínimos que ya están en la banda de tarifa y en `#nosotros`, con dos
+> filas cuyo contenido era la palabra "Ninguno". Un bloque titulado "Lo que debes saber
+> antes de reservar" que no dice nada de cancelación, abono, check-in ni pagos anuncia un
+> hueco: mete dudas que el comprador no tenía. **No se reintroduce hasta que existan, como
+> mínimo, check-in/check-out, abono, política de cancelación y métodos de pago.**
 
 **Estructura:**
 
@@ -905,7 +913,7 @@ Reglas:
 3. **1.6** (FAQ 3, 5 y 6) — la respuesta más leída de la página.
 4. **1.3** (unificar WhatsApp + etiqueta de tarjetas) — mecánico, alto impacto.
 5. **1.7** (Nosotros) — copy, sin riesgo técnico.
-6. **1.5** (condiciones) — necesita CSS y revisión visual.
+6. **1.5** (condiciones) — 🔒 diferida a Fase 3: sin datos de §7 no aporta y resta.
 7. **2.6** (aviso de cookies) — antes de cualquier campaña o publicación.
 8. **2.1** y **2.2** (sitemap + robots) — sin riesgo, cierran el SEO técnico.
 9. **2.7** (navegación y `tel:`) y **2.4** (og-image).

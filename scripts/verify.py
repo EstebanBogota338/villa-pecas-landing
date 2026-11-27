@@ -159,7 +159,7 @@ def main() -> int:
         check(claim.lower() in src.lower(), "1.4", f"{rel}: el claim del hero no está actualizado")
 
         # ------------------------------------------------------- condiciones
-        check(bool(doc.xpath("//*[@id='condiciones']")), "1.5", f"{rel}: falta #condiciones")
+        # 1.5 está diferida (ROADMAP §1.5): no se comprueba #condiciones.
         check(bool(doc.xpath("//*[@id='precios']")), "2.7", f"{rel}: falta id='precios' en la banda")
 
         # ------------------------------------------------------------ imágenes
