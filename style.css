@@ -1716,3 +1716,90 @@ input:focus-visible,
         gap: 8px;
     }
 }
+
+/* ==========================================================
+   BANDA DE PRECIO
+========================================================== */
+
+.price-band {
+    background: var(--green-dark);
+    border-top: 1px solid rgba(196, 169, 104, 0.28);
+    border-bottom: 1px solid rgba(196, 169, 104, 0.18);
+    padding: 60px 8% 66px;
+    text-align: center;
+}
+
+.price-band-inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.price-band-eyebrow {
+    color: var(--gold-light);
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+
+.price-band-price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px 14px;
+    margin: 0;
+}
+
+.price-band-amount {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--cream);
+}
+
+.price-band-unit {
+    color: var(--gold-light);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.price-band-note {
+    max-width: 620px;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.price-band-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    margin-top: 28px;
+    padding: 0 30px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.price-band-cta:hover {
+    background: var(--gold);
+    color: var(--text-dark);
+}
+
+@media (max-width: 500px) {
+    .price-band {
+        padding: 46px 6% 52px;
+    }
+
+    .price-band-note {
+        font-size: 0.9rem;
+    }
+}
