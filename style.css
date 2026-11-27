@@ -2077,3 +2077,22 @@ html.has-banner .mobile-bar {
         display: flex;
     }
 }
+
+/* ==========================================================
+   DETALLE DE LA BANDA DE TARIFA
+   Equivalente por persona (condicionado a 22) y salida para
+   grupos mas pequenos.
+========================================================== */
+
+.price-band-detail {
+    margin: 16px auto 0;
+    max-width: 560px;
+    color: var(--gold-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+.price-band-detail strong {
+    font-weight: 500;
+}
