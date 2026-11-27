@@ -4,16 +4,19 @@
 > Cada tarea indica archivos, cambio exacto y criterio de aceptación. Si algo no está aquí,
 > no se inventa: se anota en **§7 Datos pendientes** y se pregunta.
 
-Última actualización: **revisión CRO del 27/11/2026**, sobre `main` = `2d56aad`
-(fase 4 de CRO ya publicada en GitHub Pages). Rama de trabajo: `feat/cro-final`,
-fast-forward sobre `main`.
+Última actualización: **cierre de la Fase 1, 27/11/2026**. `main` = `f3c3d90`
+(merge `bf96572`) y **desplegado en GitHub Pages**: las tareas 1.1, 1.2, 1.3, 1.4,
+1.6 y 1.7 están en producción y verificadas contra el sitio publicado. La 1.5 se
+retiró y queda diferida a Fase 3.
+
+**Siguiente fase: Fase 2 — SEO y estructura (§4), seis tareas abiertas.**
 
 Modelo confirmado por el dueño: **casa completa** (exclusiva), con equivalente por
 persona y negociación caso a caso para grupos menores de 22. **Sin mínimo de personas
 ni de noches.**
 
-Este documento sustituye la versión anterior. Los cambios de esta revisión están
-listados en **§11**.
+Este documento sustituye la versión anterior. Los cambios de esa revisión están
+listados en **§11**; el historial de ejecución, en **§12**.
 
 ---
 
@@ -162,19 +165,24 @@ cada idioma sin JavaScript. Si el agente toca uno y no el otro, es un bug.
 
 ---
 
-## 3. FASE 1 — Conversión (prioridad ALTA)
+## 3. FASE 1 — Conversión (prioridad ALTA) — ✅ COMPLETA Y DESPLEGADA
+
+> Estado: **cerrada**. Publicada en `main` (`bf96572`) y verificada en el sitio en
+> producción el 27/11/2026: hero, banda de tarifa, WhatsApp, FAQ, `#nosotros` y la
+> retirada de `#condiciones`. Gate: 42/48, con los 6 rojos restantes todos de Fase 2.
+> No reabrir estas tareas sin un motivo nuevo.
 
 ### 1.1 Bloque de tarifas definitivo
 
 **Archivos:** `index.html`, `en/index.html`
-**Estado:** abierta
+**Estado:** ✅ **PUBLICADA** en `main` — merge `bf96572`, desplegada en GitHub Pages (`f3c3d90`).
 **Objetivo:** que la tarifa se entienda en 5 segundos: **la casa completa**, hasta 22
 personas, sin mínimos, con el equivalente por persona condicionado y una salida clara
 para grupos pequeños.
 
-- [ ] Localizar `<section class="price-band" …>` (justo después del hero). **No cambiar
+- [x] Localizar `<section class="price-band" …>` (justo después del hero). **No cambiar
       clases ni estructura**: solo textos y **un** elemento nuevo (`-detail`, §3.1.b).
-- [ ] Dejar el contenido exacto:
+- [x] Dejar el contenido exacto:
 
 | Elemento | Español | English |
 | --- | --- | --- |
@@ -190,7 +198,7 @@ para grupos pequeños.
 > prohíbe y que el dueño no ha autorizado. Sustituida por la redacción de la tabla.
 > El resto del bloque no cambia.
 
-- [ ] Actualizar la nota del bloque de contacto (`.contact-price-note`):
+- [x] Actualizar la nota del bloque de contacto (`.contact-price-note`):
 
 | Español | English |
 | --- | --- |
@@ -258,7 +266,7 @@ aparece **solo** como equivalencia condicionada a las 22 plazas (lo comprueba
 ### 1.2 Eliminar "Desde" / "From" del precio
 
 **Archivos:** `index.html`, `en/index.html`
-**Estado:** abierta
+**Estado:** ✅ **PUBLICADA** en `main` — merge `bf96572`, desplegada en GitHub Pages (`f3c3d90`).
 **Motivo:** la casa tiene un precio fijo. "Desde" solo tiene sentido si existe una tarifa
 por debajo, y la temporada baja se negocia en WhatsApp, no se publica. Escrito "Desde",
 $1.320.000 se lee como suelo cuando en realidad es el techo.
@@ -287,7 +295,7 @@ grep -n ">From<\|From COP" en/index.html    # sin resultados
 ### 1.3 Unificar los CTA de WhatsApp
 
 **Archivos:** `index.html`, `en/index.html`
-**Estado:** abierta
+**Estado:** ✅ **PUBLICADA** en `main` — merge `bf96572`, desplegada en GitHub Pages (`f3c3d90`).
 **Situación:** hay **13 enlaces `wa.me` por página** con **4 mensajes distintos**. Tres de
 ellos son casi idénticos, pero el de las tarjetas dice *"me interesa la Piscina"*, que en
 un modelo de casa completa suena a que se alquila la piscina por separado.
@@ -348,9 +356,9 @@ En inglés, `espacio` es `the Pool`, `the BBQ Area`, `the Steam Room`, `the Bedr
 **Motivo:** "Cotizar este espacio" bajo una foto de la piscina sugiere que la piscina se
 alquila aparte. En el modelo de casa completa, el CTA correcto es de disponibilidad.
 
-- [ ] En las 6 tarjetas de `.room-card`, cambiar el texto visible
+- [x] En las 6 tarjetas de `.room-card`, cambiar el texto visible
       `Cotizar este espacio` → `Consultar disponibilidad`.
-- [ ] Conservar el `<span class="sr-only">: <Nombre del espacio></span>` tal como está
+- [x] Conservar el `<span class="sr-only">: <Nombre del espacio></span>` tal como está
       (accesibilidad) y **no** tocar `data-cta`.
 
 **Criterio de aceptación:** 13 enlaces por página, todos con `text=` y solo dos
@@ -361,7 +369,7 @@ mensajes base (GEN y CARD); ninguna variante huérfana; ninguna tarjeta dice "Co
 ### 1.4 Reescritura del Hero (contenido **y** jerarquía)
 
 **Archivos:** `index.html`, `en/index.html`, `style.css`
-**Estado:** abierta
+**Estado:** ✅ **PUBLICADA** en `main` — merge `bf96572`, desplegada en GitHub Pages (`f3c3d90`).
 **Objetivo:** que el hero responda *qué es*, *para cuántos*, *dónde* y *qué hago ahora*.
 Hoy vende "experiencia", no menciona que se alquila la casa entera ni que no hay mínimos,
 y la línea que sí vende se renderiza a 16 px (0,95 rem móvil) bajo un logotipo de 128 px.
@@ -478,7 +486,7 @@ footer resuelve.
 ### 1.6 Alinear el FAQ con el modelo de casa completa
 
 **Archivos:** `index.html`, `en/index.html` (HTML **y** JSON-LD)
-**Estado:** abierta
+**Estado:** ✅ **PUBLICADA** en `main` — merge `bf96572`, desplegada en GitHub Pages (`f3c3d90`).
 **Motivo:** la respuesta 3 del FAQ es **correcta** pero **incompleta**: confirma que el
 precio es por la casa completa y no dice el equivalente por persona, el "sin mínimo" ni
 la salida para grupos pequeños. Es la respuesta más leída de la página.
@@ -492,9 +500,9 @@ la salida para grupos pequeños. Es la respuesta más leída de la página.
 | --- | --- |
 | `El precio de $1.320.000 COP por noche es por la casa completa, hasta 22 personas: si vienen los 22, sale a $60.000 por persona. No hay mínimo de personas ni de noches. Si vienen menos de 22, la tarifa se ajusta: escríbenos por WhatsApp con tus fechas y la calculamos. En temporada baja también tenemos tarifas especiales.` | `COP $1,320,000 per night is for the whole villa, up to 22 guests: with all 22 it works out to COP $60,000 per person. There is no minimum number of guests and no minimum stay. Coming with fewer than 22? The rate adjusts — message us with your dates and we will work it out. We also have special rates in low season.` |
 
-- [ ] Actualizar el `<p>` de la respuesta 3 en las dos páginas.
-- [ ] Actualizar el **mismo texto** en `mainEntity[2].acceptedAnswer.text` del `FAQPage`.
-- [ ] Comprobar que el texto visible y el del schema son idénticos carácter por carácter
+- [x] Actualizar el `<p>` de la respuesta 3 en las dos páginas.
+- [x] Actualizar el **mismo texto** en `mainEntity[2].acceptedAnswer.text` del `FAQPage`.
+- [x] Comprobar que el texto visible y el del schema son idénticos carácter por carácter
       (lo comprueba `scripts/verify.py`).
 
 #### 1.6.b Respuestas 5 y 6: honestidad sin autogol
@@ -527,7 +535,7 @@ pequeños.
 ### 1.7 "La casa es toda tuya" — sustituir el copy genérico de Nosotros
 
 **Archivos:** `index.html`, `en/index.html` (solo contenido dentro de `.about`)
-**Estado:** abierta
+**Estado:** ✅ **PUBLICADA** en `main` — merge `bf96572`, desplegada en GitHub Pages (`f3c3d90`).
 **Motivo:** `#nosotros` ocupa una pantalla completa en móvil para decir *"desconectarse
 del ritmo cotidiano"* y *"conectar con lo esencial"*, que podría estar en cualquier
 villa del mundo. Es el hueco natural de la diferenciación y hoy está desperdiciado.
@@ -753,20 +761,46 @@ y el CTA de la barra móvil son visibles y clicables sin cerrar nada.
 
 ### 2.7 Navegación coherente y contacto directo
 
-**Archivos:** `index.html`, `en/index.html`
+**Archivos:** `index.html`, `en/index.html`, `style.css`
 **Estado:** abierta
 
-- [ ] Añadir `id="precios"` a `<section class="price-band" …>` (permite enlazar
-      "ver precios" desde el hero y el menú sin cambiar la estructura).
+- [ ] Añadir `id="precios"` a `<section class="price-band" aria-labelledby="price-band-name">`
+      (permite enlazar "ver precios" desde el hero y el menú sin cambiar la estructura).
+      No tocar `aria-labelledby`.
 - [ ] Unificar la etiqueta del menú: hoy el navbar dice `COMODIDADES` y el footer
       `ESPACIOS` para el mismo ancla `#espacios`. Usar **`ESPACIOS`** en los dos.
-      En inglés: `SPACES` en ambos.
-- [ ] Envolver el teléfono del footer en un enlace `tel:` (hoy es solo texto):
-      `<a href="tel:+573108137862">+57 310 813 7862</a>`. Mantener el enlace de WhatsApp.
-      Cubre a quien llega desde un folleto o un QR y prefiere llamar.
+      En inglés: `AMENITIES` → `SPACES` en el navbar (el footer ya dice `SPACES`).
+- [ ] Añadir una vía telefónica en el bloque `RESERVAS` del footer. **Ojo: el número del
+      footer no es texto plano**, es un enlace a `wa.me`; no se sustituye, se le añade
+      debajo un segundo enlace con el mismo número y `href="tel:+573108137862"`:
 
-**Criterio:** las dos páginas usan la misma etiqueta en navbar y footer; `#precios` y
-`#condiciones` resuelven; el `tel:` marca correctamente en móvil.
+```html
+<a href="tel:+573108137862" class="footer-tel-link">Llamar</a>
+<!-- en/index.html: "Call" -->
+```
+
+```css
+.footer-tel-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;           /* área táctil mínima */
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-tel-link:hover {
+    color: var(--gold);
+}
+```
+
+  El número no se duplica: ya está arriba como enlace de WhatsApp.
+
+**Criterio:** las dos páginas usan la misma etiqueta en navbar y footer; `#precios`
+resuelve y no rompe `aria-labelledby`; el `tel:` marca correctamente en móvil y tiene
+área táctil ≥ 44 px; el gate de §2.7 pasa en verde en ambos idiomas.
 
 ---
 
@@ -876,7 +910,7 @@ corresponda a una tarea aún no ejecutada (el script lo dice en el mensaje).
 - [ ] 1440 px y 360 px: nada desborda en horizontal (`scrollWidth == clientWidth`).
 - [ ] Móvil: navbar con logo · bandera · hamburguesa; barra fija abajo.
 - [ ] **Primera visita sin aceptar nada**: el precio y el CTA se ven (§2.6).
-- [ ] Teclado: Tab recorre hero → nav → tarjetas → FAQ → condiciones → contacto.
+- [ ] Teclado: Tab recorre hero → nav → tarjetas → FAQ → contacto.
 - [ ] `prefers-reduced-motion`: sin animaciones de entrada.
 - [ ] Ambas versiones: cambiar de idioma mantiene la sección (anclas idénticas).
 
@@ -905,24 +939,26 @@ Reglas:
 
 ---
 
-## 10. Orden de ejecución sugerido
+## 10. Orden de ejecución
 
-1. **1.2** (quitar "Desde") — 5 minutos, riesgo cero, y hoy es el error de precio más
-   visible: la barra móvil dice "Desde $1.320.000".
-2. **1.1** (bloque de tarifas) + **1.4** (hero) — misma historia comercial, van juntos.
-3. **1.6** (FAQ 3, 5 y 6) — la respuesta más leída de la página.
-4. **1.3** (unificar WhatsApp + etiqueta de tarjetas) — mecánico, alto impacto.
-5. **1.7** (Nosotros) — copy, sin riesgo técnico.
-6. **1.5** (condiciones) — 🔒 diferida a Fase 3: sin datos de §7 no aporta y resta.
-7. **2.6** (aviso de cookies) — antes de cualquier campaña o publicación.
-8. **2.1** y **2.2** (sitemap + robots) — sin riesgo, cierran el SEO técnico.
-9. **2.7** (navegación y `tel:`) y **2.4** (og-image).
-10. **2.5** (galería) — solo si se puede hacer completo.
-11. **2.3** — solo cuando lleguen los assets.
+### Fase 1 — ✅ hecha
 
-> **Nota:** la versión anterior de este documento ponía 1.6 primero porque consideraba la
-> respuesta del FAQ "incorrecta". Con el modelo validado (casa completa) no lo es: solo
-> está incompleta, y por eso baja al tercer lugar.
+1.2 → 1.1 → 1.4 → 1.6 → 1.3 → 1.7, y 1.5 retirada. Publicada en `main` y desplegada.
+
+### Fase 2 — siguiente, en este orden
+
+1. **2.6** (aviso de cookies) — primero: hoy tapa el precio en la primera visita y
+   desactiva la barra móvil. Es el mayor coste de conversión que queda en la página.
+2. **2.7** (`id="precios"`, etiquetas de navegación y `tel:`) — 20 minutos, cierra el
+   último rojo de coherencia del gate.
+3. **2.1** y **2.2** (sitemap + robots) — sin riesgo, cierran el SEO técnico.
+4. **2.4** (og-image) — es lo que se ve al compartir el enlace por WhatsApp.
+5. **2.5** (galería) — solo si se puede hacer completo; un lightbox a medias es peor
+   que ninguno.
+6. **2.3** (mapa) — bloqueada hasta que lleguen los assets de §7.
+
+> Criterio de cierre de Fase 2: `python scripts/verify.py` en **48/48**, más la revisión
+> visual de §8 en los dos anchos.
 
 ---
 
@@ -973,3 +1009,45 @@ Resumen de lo que se corrigió y se añadió, para que el dueño pueda auditar e
 
 **Sin cambios** (siguen como estaban): arquitectura bilingüe, reglas de implementación
 1–7, §1.2, §1.5, §2.1, §2.2, §2.3, §3 bloqueada, §6 bloqueada, §9.
+
+---
+
+## 12. Historial de ejecución
+
+### Fase 1 — cerrada y desplegada (27/11/2026)
+
+| Commit | Qué hizo |
+| --- | --- |
+| `4dbe78d` | Elimina el "Desde" del precio en las dos versiones (§1.2) |
+| `d2137de` | Banda de tarifa con casa completa y equivalente condicionado (§1.1) |
+| `05fa73f` | Hero reescrito y jerarquía tipográfica (§1.4) |
+| `05564d8` | Mensajes de WhatsApp unificados y etiqueta de tarjetas (§1.3) |
+| `0fd1e22` | `#nosotros` con argumentos verificables (§1.7) |
+| `2d7cfd4` | Bloque de condiciones (§1.5) — **retirado después** |
+| `92289b9` | FAQ de precio, agua caliente y fiestas (§1.6) |
+| `75b1822` | `text-wrap: pretty` en la descripción del hero (insuficiente, ver abajo) |
+| `7a43684` | Re-codifica los 26 enlaces de WhatsApp (venían doblemente codificados) |
+| `7a562c7` | Retira la sección de condiciones, diferida a Fase 3 |
+| `80abb20` | `#nosotros` usa `SHumedGal.webp` en lugar del río |
+| `4b02171` | Cierra la viuda del hero y el "2 2" del eyebrow |
+| `bf96572` | Merge de la Fase 1 a `main` |
+| `f3c3d90` | `_config.yml`: excluye `ROADMAP.md` y `scripts/` del sitio publicado |
+
+**Incidencias registradas** (para no repetirlas):
+
+1. **Enlaces de WhatsApp doblemente codificados.** `quote()` se aplicó sobre una cadena
+   ya codificada: los 26 enlaces abrían WhatsApp con `%20` y `%2C` en crudo. El gate no
+   lo detectaba porque solo comprobaba que existiera `text=`; se añadió la comprobación
+   (`97cd9e6`).
+2. **`text-wrap: pretty` no resolvió la viuda.** El commit `75b1822` afirmaba haberla
+   cerrado y no era cierto: a 1440 px seguía quedando "de 22." sola. Se arregló acortando
+   la frase (`4b02171`). Lección: un cambio tipográfico se verifica mirando, no asumiendo.
+3. **La sección de condiciones se publicó y hubo que retirarla.** Repetía precio,
+   exclusividad y mínimos, y su título prometía un contrato inexistente. Queda diferida a
+   Fase 3 con requisito explícito (§1.5).
+4. **`ROADMAP.md` iba a quedar público** en `/ROADMAP.md` al mergear, con la estrategia de
+   negociación dentro. Se excluyó con `_config.yml` y se verificó el 404 en producción.
+
+### Fase 2 — pendiente
+
+Sin ejecutar. Ver §4 y el orden de §10.
