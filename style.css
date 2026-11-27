@@ -1803,3 +1803,62 @@ input:focus-visible,
         font-size: 0.9rem;
     }
 }
+
+/* ==========================================================
+   CTA POR TARJETA DEL GRID
+========================================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.room-cta {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 10px;
+    min-height: 44px;
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--green-ink);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(63, 107, 80, 0.35);
+    transition: var(--transition);
+}
+
+/* La tarjeta pasa a columna para que el CTA quede alineado abajo en las
+   seis tarjetas, aunque los textos midan distinto. */
+.room-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.room-cta:hover {
+    color: var(--green-dark);
+    border-bottom-color: var(--green-dark);
+}
+
+.room-cta-arrow {
+    transition: transform 0.25s ease;
+}
+
+.room-cta:hover .room-cta-arrow {
+    transform: translateX(4px);
+}
