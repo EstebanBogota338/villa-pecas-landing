@@ -1,0 +1,12 @@
+# Configuracion minima de GitHub Pages.
+#
+# El sitio es HTML/CSS/JS estatico y no necesita Jekyll para construirse, pero
+# GitHub Pages lo ejecuta por defecto. Esta lista evita que los documentos de
+# trabajo y las utilidades de desarrollo se publiquen como parte del sitio:
+# ROADMAP.md contiene la estrategia comercial y no debe ser legible en
+# /ROADMAP.md por un huesped ni por la competencia.
+
+exclude:
+  - ROADMAP.md
+  - README.md
+  - scripts/
