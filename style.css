@@ -1698,21 +1698,382 @@ input:focus-visible,
     line-height: 1;
 }
 
-.lang-menu-item {
-    display: none;
-}
-
-/* En movil el selector viaja al menu desplegable: en el navbar no cabe
-   junto al logo y al CTA. */
+/* En movil el CTA del navbar se oculta (lo asume la barra fija inferior)
+   para que el selector de idioma quede siempre visible.
+   Orden visual: logo - bandera - hamburguesa. */
 @media (max-width: 600px) {
-    .nav-actions .lang-switch {
+    .logo {
+        order: 1;
+    }
+
+    .nav-actions {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-actions .nav-button {
         display: none;
     }
 
-    .nav-menu .lang-menu-item {
+    .nav-toggle-label {
+        order: 3;
+        margin-left: 14px;
+        margin-right: 0;
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* ==========================================================
+   BANDA DE PRECIO
+========================================================== */
+
+.price-band {
+    background: var(--green-dark);
+    border-top: 1px solid rgba(196, 169, 104, 0.28);
+    border-bottom: 1px solid rgba(196, 169, 104, 0.18);
+    padding: 60px 8% 66px;
+    text-align: center;
+}
+
+.price-band-inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.price-band-eyebrow {
+    color: var(--gold-light);
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+
+.price-band-price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px 14px;
+    margin: 0;
+}
+
+.price-band-amount {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: var(--cream);
+}
+
+.price-band-unit {
+    color: var(--gold-light);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.price-band-note {
+    max-width: 620px;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.price-band-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    margin-top: 28px;
+    padding: 0 30px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.price-band-cta:hover {
+    background: var(--gold);
+    color: var(--text-dark);
+}
+
+@media (max-width: 500px) {
+    .price-band {
+        padding: 46px 6% 52px;
+    }
+
+    .price-band-note {
+        font-size: 0.9rem;
+    }
+}
+
+/* ==========================================================
+   CTA POR TARJETA DEL GRID
+========================================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.room-cta {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 10px;
+    min-height: 44px;
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--green-ink);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(63, 107, 80, 0.35);
+    transition: var(--transition);
+}
+
+/* La tarjeta pasa a columna para que el CTA quede alineado abajo en las
+   seis tarjetas, aunque los textos midan distinto. */
+.room-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.room-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.room-cta:hover {
+    color: var(--green-dark);
+    border-bottom-color: var(--green-dark);
+}
+
+.room-cta-arrow {
+    transition: transform 0.25s ease;
+}
+
+.room-cta:hover .room-cta-arrow {
+    transform: translateX(4px);
+}
+
+/* ==========================================================
+   PREGUNTAS FRECUENTES
+========================================================== */
+
+.faq {
+    padding: 110px 8%;
+    background: var(--cream);
+}
+
+.faq-header {
+    max-width: 800px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.faq-eyebrow {
+    color: var(--green-ink);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.faq-header h2 {
+    color: var(--green-dark);
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: 1px;
+}
+
+.faq-description {
+    max-width: 600px;
+    margin: 25px auto 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(49, 90, 70, 0.16);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(49, 90, 70, 0.16);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 64px;
+    padding: 22px 0;
+    cursor: pointer;
+    list-style: none;
+    color: var(--green-dark);
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 500;
+    line-height: 1.3;
+    transition: color 0.25s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question:hover {
+    color: var(--green);
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--green-ink);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding-bottom: 26px;
+}
+
+.faq-answer p {
+    max-width: 720px;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .faq-icon {
+        transition: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .faq {
+        padding: 70px 6%;
+    }
+
+    .faq-question {
+        gap: 16px;
+        font-size: 1.1rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.92rem;
+    }
+}
+
+/* ==========================================================
+   BARRA FIJA DE RESERVA (MOVIL) + SELECTOR DE IDIOMA SIEMPRE VISIBLE
+========================================================== */
+
+.mobile-bar {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: var(--green-dark);
+    border-top: 1px solid rgba(196, 169, 104, 0.35);
+    box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* Mientras el aviso de cookies está abierto no se pisan */
+html.has-banner .mobile-bar {
+    display: none;
+}
+
+.mobile-bar-price {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0;
+    min-width: 0;
+}
+
+.mobile-bar-label {
+    color: var(--gold-light);
+    font-size: 0.58rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.mobile-bar-amount {
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.mobile-bar-unit {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+}
+
+.mobile-bar-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.mobile-bar-cta:hover {
+    background: var(--gold-light);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 92px;
+    }
+
+    .mobile-bar {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
     }
 }
