@@ -13,6 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* =========================================================
+       Selector de idioma: recuerda la elección para la próxima visita
+    ========================================================== */
+    document.querySelectorAll('.lang-switch, .lang-menu-item').forEach((link) => {
+        link.addEventListener('click', () => {
+            try {
+                localStorage.setItem('villapecas-lang', link.getAttribute('hreflang'));
+            } catch (error) {
+                /* Sin almacenamiento disponible el enlace funciona igual. */
+            }
+        });
+    });
+
+
+    /* =========================================================
        Carrusel de galería
        - el scroll lo hace el navegador (scroll-snap): fluido en móvil
        - las flechas van a un índice exacto, no suman píxeles
