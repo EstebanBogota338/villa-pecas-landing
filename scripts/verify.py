@@ -19,6 +19,7 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 from lxml import html as lxml_html
 
@@ -100,6 +101,18 @@ def main() -> int:
         sin_noopener = [a.get("href") for a in wa
                         if a.get("target") == "_blank" and "noopener" not in (a.get("rel") or "")]
         check(not sin_noopener, "1.3", f"{rel}: {len(sin_noopener)} enlaces _blank sin rel=noopener")
+
+        # Un enlace doblemente codificado (text=Hola%252C...) hace que WhatsApp
+        # muestre los códigos en crudo: el mensaje prellenado deja de servir.
+        doble = []
+        for a in wa:
+            href = a.get("href") or ""
+            texto = (parse_qs(urlparse(href).query).get("text") or [""])[0]
+            if re.search(r"%[0-9A-Fa-f]{2}", texto):
+                doble.append(texto[:60])
+        check(not doble, "1.3",
+              f"{rel}: {len(doble)} enlaces con el mensaje doblemente codificado "
+              f"(WhatsApp mostraría los %20/%2C en crudo)")
 
         # ------------------------------------------------------- "Desde" / "From"
         if lang == "es":
