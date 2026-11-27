@@ -319,6 +319,9 @@ body {
     font-size: 1rem;
     line-height: 1.8;
     font-weight: 400;
+    /* Evita que quede una sola palabra en la ultima linea del hero.
+       Los navegadores que no lo soportan lo ignoran. */
+    text-wrap: pretty;
 }
 
 .hero-button {
