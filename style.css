@@ -2099,3 +2099,8 @@ html.has-banner .mobile-bar {
 .price-band-detail strong {
     font-weight: 500;
 }
+
+/* El letter-spacing del eyebrow separa los digitos: "22" se leia "2 2". */
+.hero-eyebrow-figure {
+    letter-spacing: 0.05em;
+}
