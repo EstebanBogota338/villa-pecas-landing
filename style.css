@@ -298,9 +298,9 @@ body {
     display: block;
     margin-top: 1.4rem;
     color: var(--cream);
-    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    font-size: clamp(1.25rem, 2.2vw, 1.7rem);
     letter-spacing: 1px;
-    line-height: 1.5;
+    line-height: 1.35;
     font-weight: 500;
 }
 
@@ -319,6 +319,9 @@ body {
     font-size: 1rem;
     line-height: 1.8;
     font-weight: 400;
+    /* Evita que quede una sola palabra en la ultima linea del hero.
+       Los navegadores que no lo soportan lo ignoran. */
+    text-wrap: pretty;
 }
 
 .hero-button {
@@ -1209,7 +1212,7 @@ section {
         letter-spacing: 3px;
     }
     .hero-title-claim {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
     }
     .hero-description {
         font-size: 0.9rem;
@@ -1324,7 +1327,7 @@ section {
     }
     .hero-eyebrow {
         font-size: 0.7rem;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
         line-height: 1.5;
     }
     .hero-title-brand {
@@ -1332,9 +1335,9 @@ section {
         letter-spacing: 3px;
     }
     .hero-title-claim {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
         letter-spacing: 0.5px;
-        line-height: 1.5;
+        line-height: 1.35;
     }
     .hero-description {
         font-size: 0.85rem;
@@ -2076,4 +2079,28 @@ html.has-banner .mobile-bar {
     .mobile-bar {
         display: flex;
     }
+}
+
+/* ==========================================================
+   DETALLE DE LA BANDA DE TARIFA
+   Equivalente por persona (condicionado a 22) y salida para
+   grupos mas pequenos.
+========================================================== */
+
+.price-band-detail {
+    margin: 16px auto 0;
+    max-width: 560px;
+    color: var(--gold-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+.price-band-detail strong {
+    font-weight: 500;
+}
+
+/* El letter-spacing del eyebrow separa los digitos: "22" se leia "2 2". */
+.hero-eyebrow-figure {
+    letter-spacing: 0.05em;
 }
