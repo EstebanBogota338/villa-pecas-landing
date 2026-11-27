@@ -12,6 +12,11 @@
 
         <link rel="canonical" href="https://estebanbogota338.github.io/villa-pecas-landing/">
 
+        <!-- Version en ingles y version por defecto para buscadores -->
+        <link rel="alternate" hreflang="es" href="https://estebanbogota338.github.io/villa-pecas-landing/">
+        <link rel="alternate" hreflang="en" href="https://estebanbogota338.github.io/villa-pecas-landing/en/">
+        <link rel="alternate" hreflang="x-default" href="https://estebanbogota338.github.io/villa-pecas-landing/">
+
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Villa Pecas">
         <meta property="og:title" content="Villa Pecas | Villa con piscina para grupos en Restrepo, Meta">
@@ -23,6 +28,7 @@
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:alt" content="Piscina de Villa Pecas con vista al valle en Restrepo, Meta">
         <meta property="og:locale" content="es_CO">
+        <meta property="og:locale:alternate" content="en_US">
 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Villa Pecas | Villa con piscina para grupos en Restrepo, Meta">
@@ -40,7 +46,18 @@
         <link rel="stylesheet" href="style.css">
 
         <!-- Si no hay JS (o falla), el contenido no se oculta: ver style.css -->
-        <script>document.documentElement.classList.add('js');</script>
+        <script>
+            /* Marca que hay JS y recuerda el idioma elegido: si el visitante
+               eligio ingles, se le lleva a /en/ sin pintar la version espanola. */
+            (function () {
+                document.documentElement.classList.add('js');
+                try {
+                    if (localStorage.getItem('villapecas-lang') === 'en') {
+                        location.replace('en/' + location.hash);
+                    }
+                } catch (error) {}
+            })();
+        </script>
 
         <!-- Fuentes -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,6 +80,7 @@
           "image": "https://estebanbogota338.github.io/villa-pecas-landing/assets/og-image.jpg",
           "telephone": "+573108137862",
           "priceRange": "Desde $60.000 COP por persona y noche",
+          "inLanguage": "es",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Restrepo",
@@ -233,19 +251,38 @@
         CONTACTO
     </a>
 
+    <a class="lang-menu-item" href="en/" hreflang="en" aria-label="Idioma actual: español. Cambiar a inglés">
+        <svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true" focusable="false"><rect width="24" height="8" fill="#FCD116"/><rect y="8" width="24" height="4" fill="#003893"/><rect y="12" width="24" height="4" fill="#CE1126"/></svg>
+        <span class="lang-switch-code">ES</span>
+    </a>
+
 </nav>
 
 
 <!-- ===== BOTÓN RESERVAR → WHATSAPP ===== -->
 
-<a
-    href="https://wa.me/573108137862?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
-    class="nav-button" data-cta="navbar"
-    target="_blank"
-    rel="noopener"
->
-    RESERVAR
-</a>
+<div class="nav-actions">
+
+    <a
+        class="lang-switch"
+        href="en/"
+        hreflang="en"
+        aria-label="Idioma actual: español. Cambiar a inglés"
+    >
+        <svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true" focusable="false"><rect width="24" height="8" fill="#FCD116"/><rect y="8" width="24" height="4" fill="#003893"/><rect y="12" width="24" height="4" fill="#CE1126"/></svg>
+        <span class="lang-switch-code">ES</span>
+    </a>
+
+    <a
+        href="https://wa.me/573108137862?text=Hola%2C%20quisiera%20conocer%20la%20disponibilidad%20y%20precios%20de%20Villa%20Pecas"
+        class="nav-button" data-cta="navbar"
+        target="_blank"
+        rel="noopener"
+    >
+        RESERVAR
+    </a>
+
+</div>
 
 </header>
 
